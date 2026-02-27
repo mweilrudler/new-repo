@@ -107,8 +107,8 @@ export default function Home() {
                 <p>Industry specialty teams</p>
               </div>
               <div className="space-y-1">
-                <p className="text-2xl font-semibold text-ink-900">3</p>
-                <p>Regional offices with local reach</p>
+                <p className="text-2xl font-semibold text-ink-900">1</p>
+                <p>Office location with local reach</p>
               </div>
             </div>
           </div>

@@ -39,7 +39,7 @@ export default function About() {
             <ul className="space-y-2 text-sm text-slate-600">
               <li>Founded in 1988 with a focus on owner-led businesses</li>
               <li>Dedicated advisory, tax, and assurance practice leaders</li>
-              <li>Offices in Cincinnati, Columbus, and Louisville</li>
+              <li>Office in Ft Wright, KY serving the region</li>
             </ul>
           </div>
         </div>
