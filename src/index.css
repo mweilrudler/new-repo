@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-ink-900 font-sans antialiased;
+}
+
+::selection {
+  background: rgba(2, 9, 222, 0.35);
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-ink-900 px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-ink-800;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full border border-ink-900/20 px-5 py-2.5 text-sm font-semibold text-ink-900 transition hover:border-ink-900/50 hover:bg-white;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold text-ink-900;
+  }
+
+  .section-kicker {
+    @apply text-xs uppercase tracking-[0.2em] text-forest-600;
+  }
+
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-soft;
+  }
+}
