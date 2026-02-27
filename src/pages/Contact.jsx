@@ -1,18 +1,11 @@
 export default function Contact() {
   const offices = [
     {
-      name: "Cincinnati",
-      address: "412 Vine Street, Suite 620",
-      city: "Cincinnati, OH 45202",
-      phone: "513.555.0147",
+      name: "Ft Wright",
+      address: "809 Wright Summit Pkwy Suite 200",
+      city: "Ft Wright, KY",
+      phone: "859.555.0147",
       hours: "Mon-Fri, 8:00am-5:30pm",
-    },
-    {
-      name: "Columbus",
-      address: "88 High Street, Suite 1200",
-      city: "Columbus, OH 43215",
-      phone: "614.555.0182",
-      hours: "Mon-Fri, 8:30am-5:00pm",
     },
   ];
 
@@ -32,13 +25,13 @@ export default function Contact() {
           </div>
           <div className="card space-y-4 p-6">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">
-              Cincinnati Office
+              Ft Wright Office
             </p>
             <p className="text-sm text-slate-600">
-              412 Vine Street, Suite 620<br />
-              Cincinnati, OH 45202
+              809 Wright Summit Pkwy Suite 200<br />
+              Ft Wright, KY
             </p>
-            <p className="text-sm text-slate-600">513.555.0147</p>
+            <p className="text-sm text-slate-600">859.555.0147</p>
             <button className="btn-outline w-full">Get directions</button>
           </div>
         </div>
@@ -46,8 +39,8 @@ export default function Contact() {
 
       <section className="container-page grid gap-8 py-16 md:grid-cols-[1fr_1fr]">
         <div className="space-y-6">
-          <p className="section-kicker">Office Locations</p>
-          <h2 className="section-title">Regional offices with local reach.</h2>
+          <p className="section-kicker">Office Location</p>
+          <h2 className="section-title">Local reach with a single office.</h2>
           <img
             src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=300&fit=crop"
             alt="Office building"

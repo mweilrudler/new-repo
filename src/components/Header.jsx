@@ -33,9 +33,7 @@ export default function Header() {
               </a>
             </div>
           </div>
-          <span className="text-white/70">
-            Cincinnati, OH | 513.555.0147
-          </span>
+          <span className="text-white/70">Ft Wright, KY | 859.555.0147</span>
         </div>
       </div>
 

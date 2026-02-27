@@ -2,11 +2,11 @@ export default function Careers() {
   const roles = [
     {
       title: "Senior Tax Manager",
-      location: "Cincinnati, OH (Hybrid)",
+      location: "Ft Wright, KY (Hybrid)",
     },
     {
       title: "Assurance Supervisor",
-      location: "Columbus, OH",
+      location: "Ft Wright, KY",
     },
     {
       title: "Advisory Analyst",

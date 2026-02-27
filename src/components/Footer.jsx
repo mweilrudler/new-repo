@@ -21,10 +21,10 @@ export default function Footer() {
             businesses, families, and nonprofits navigate growth with clarity.
           </p>
           <div className="rounded-2xl border border-slate-200/70 bg-slate-50 p-4 text-sm text-slate-700">
-            <p className="font-semibold text-ink-900">Cincinnati Office</p>
-            <p>412 Vine Street, Suite 620</p>
-            <p>Cincinnati, OH 45202</p>
-            <p>513.555.0147</p>
+            <p className="font-semibold text-ink-900">Ft Wright Office</p>
+            <p>809 Wright Summit Pkwy Suite 200</p>
+            <p>Ft Wright, KY</p>
+            <p>859.555.0147</p>
             <p>hello@rudler.com</p>
           </div>
         </div>
