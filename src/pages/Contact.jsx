@@ -4,8 +4,8 @@ export default function Contact() {
       name: "Ft Wright",
       address: "809 Wright Summit Pkwy Suite 200",
       city: "Ft Wright, KY",
-      phone: "859.555.0147",
-      hours: "Mon-Fri, 8:00am-5:30pm",
+      phone: "859.331.1717",
+      hours: "Mon-Fri, 8:00am-5:00pm",
     },
   ];
 
@@ -31,7 +31,7 @@ export default function Contact() {
               809 Wright Summit Pkwy Suite 200<br />
               Ft Wright, KY
             </p>
-            <p className="text-sm text-slate-600">859.555.0147</p>
+            <p className="text-sm text-slate-600">859.331.1717</p>
             <button className="btn-outline w-full">Get directions</button>
           </div>
         </div>

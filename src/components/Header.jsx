@@ -20,27 +20,29 @@ export default function Header() {
               Client Access
             </span>
             <div className="flex flex-wrap items-center gap-3 text-white/90">
-              <a className="hover:text-white" href="#">
-                Client Portal
-              </a>
-              <span className="text-white/40">/</span>
-              <a className="hover:text-white" href="#">
-                Pay Invoice
-              </a>
-              <span className="text-white/40">/</span>
-              <a className="hover:text-white" href="#">
-                Secure Upload
-              </a>
+               <a className="hover:text-white" href="https://www.ssportal.com/rudlercpa/" target="_blank">
+              Client Portal
+            </a>
+            <a className="hover:text-white" href="https://paynow.aiwyn.ai/payment-portal/RUDLER" target="_blank">
+              Pay Invoice
+            </a>
+            <a className="hover:text-white" href="https://exchange-taxpayer.safesendreturns.com/DropOff/v840000000000" target="_blank">
+              Secure Upload
+            </a>
             </div>
           </div>
-          <span className="text-white/70">Ft Wright, KY | 859.555.0147</span>
+          <span className="text-white/70">Ft Wright, KY | 859.331.1717</span>
         </div>
       </div>
 
       <div className="container-page flex flex-wrap items-center justify-between gap-4 py-5">
         <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-slate-100 text-ink-900">
-            <span className="text-lg font-semibold">R</span>
+          <div>
+            <img
+              src="/rudler.svg"
+              alt="Rudler Logo"
+              className="h-10 w-auto object-contain"
+            />
           </div>
           <div>
             <p className="text-base font-semibold text-ink-900">

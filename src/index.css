@@ -11,7 +11,7 @@ body {
 }
 
 ::selection {
-  background: rgba(2, 9, 222, 0.35);
+  background: #235da9;
 }
 
 @layer components {

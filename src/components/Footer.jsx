@@ -24,8 +24,8 @@ export default function Footer() {
             <p className="font-semibold text-ink-900">Ft Wright Office</p>
             <p>809 Wright Summit Pkwy Suite 200</p>
             <p>Ft Wright, KY</p>
-            <p>859.555.0147</p>
-            <p>hello@rudler.com</p>
+            <p>859.331.1717</p>
+            <p>info@rudler.cpa</p>
           </div>
         </div>
 
@@ -47,13 +47,13 @@ export default function Footer() {
             Client Access
           </p>
           <div className="flex flex-col gap-2 text-sm text-slate-600">
-            <a className="hover:text-ink-900" href="#">
+            <a className="hover:text-ink-900" href="https://www.ssportal.com/rudlercpa/" target="_blank">
               Client Portal
             </a>
-            <a className="hover:text-ink-900" href="#">
+            <a className="hover:text-ink-900" href="https://paynow.aiwyn.ai/payment-portal/RUDLER" target="_blank">
               Pay Invoice
             </a>
-            <a className="hover:text-ink-900" href="#">
+            <a className="hover:text-ink-900" href="https://exchange-taxpayer.safesendreturns.com/DropOff/v840000000000" target="_blank">
               Secure Upload
             </a>
           </div>
