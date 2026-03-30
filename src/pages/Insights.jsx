@@ -51,7 +51,7 @@ export default function Insights() {
     <div>
       <section className="border-b border-slate-200/70 bg-white">
         <div className="container-page grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-5">
+          <div className="space-y-5 reveal">
             <p className="section-kicker">Insights</p>
             <h1 className="text-4xl font-semibold text-ink-900">
               Thought leadership for leaders who want clarity.
@@ -61,7 +61,7 @@ export default function Insights() {
               specialists.
             </p>
           </div>
-          <div className="card space-y-4 p-6">
+          <div className="card space-y-4 p-6 reveal reveal-delay-1">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">
               Subscribe
             </p>
@@ -74,7 +74,7 @@ export default function Insights() {
       </section>
 
       <section className="container-page py-16">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 reveal">
           {insights.map((insight) => (
             <InsightCard key={insight.title} {...insight} />
           ))}

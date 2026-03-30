@@ -1,78 +1,93 @@
 import { NavLink, Link } from "react-router-dom";
 
 const navItems = [
-  { label: "Home", to: "/" },
-  { label: "Services", to: "/services" },
-  { label: "Industries", to: "/industries" },
-  { label: "Insights", to: "/insights" },
   { label: "About", to: "/about" },
   { label: "Careers", to: "/careers" },
   { label: "Contact", to: "/contact" },
+  { label: "Client Page", to: "/client"},
 ];
 
 export default function Header() {
   return (
-    <header className="border-b border-slate-200/70 bg-white/80 backdrop-blur">
-      <div className="bg-ink-900 text-white">
+    <header className="fixed top-0 w-full z-50">
+      {/* Utility bar */}
+      <div className="bg-primary text-white">
         <div className="container-page flex flex-wrap items-center justify-between gap-3 py-2 text-xs">
           <div className="flex flex-wrap items-center gap-4">
-            <span className="uppercase tracking-[0.2em] text-white/70">
+            <span className="uppercase tracking-[0.2em] text-white/50">
               Client Access
             </span>
-            <div className="flex flex-wrap items-center gap-3 text-white/90">
-               <a className="hover:text-white" href="https://www.ssportal.com/rudlercpa/" target="_blank">
-              Client Portal
-            </a>
-            <a className="hover:text-white" href="https://paynow.aiwyn.ai/payment-portal/RUDLER" target="_blank">
-              Pay Invoice
-            </a>
-            <a className="hover:text-white" href="https://exchange-taxpayer.safesendreturns.com/DropOff/v840000000000" target="_blank">
-              Secure Upload
-            </a>
+            <div className="flex flex-wrap items-center gap-3 text-white/70">
+              <a
+                className="hover:text-white transition-colors"
+                href="https://www.ssportal.com/rudlercpa/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Client Portal
+              </a>
+              <a
+                className="hover:text-white transition-colors"
+                href="https://paynow.aiwyn.ai/payment-portal/RUDLER"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Pay Invoice
+              </a>
+              <a
+                className="hover:text-white transition-colors"
+                href="https://exchange-taxpayer.safesendreturns.com/DropOff/v840000000000"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Secure Upload
+              </a>
             </div>
           </div>
-          <span className="text-white/70">Ft Wright, KY | 859.331.1717</span>
+          <span className="text-white/50">Ft Wright, KY | 859.331.1717</span>
         </div>
       </div>
 
-      <div className="container-page flex flex-wrap items-center justify-between gap-4 py-5">
-        <Link to="/" className="flex items-center gap-3">
-          <div>
+      {/* Main nav */}
+      <div className="bg-white/95 backdrop-blur-md shadow-[0_20px_40px_rgba(13,32,59,0.06)]">
+        <div className="container-page flex flex-wrap items-center justify-between gap-4 py-4">
+          <Link to="/" className="flex items-center gap-3">
             <img
               src="/rudler.svg"
               alt="Rudler Logo"
-              className="h-10 w-auto object-contain"
+              className="h-9 w-auto object-contain"
             />
-          </div>
-          <div>
-            <p className="text-base font-semibold text-ink-900">
-              Rudler
-            </p>
-            <p className="text-xs uppercase tracking-[0.3em] text-forest-600">
-              CPA + Advisory
-            </p>
-          </div>
-        </Link>
+            <div>
+              <p className="text-base font-semibold text-primary">Rudler</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-primary/70">
+                CPA + Advisory
+              </p>
+            </div>
+          </Link>
 
-        <nav className="flex flex-wrap items-center gap-5 text-sm text-slate-700">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                `transition hover:text-ink-900 ${
-                  isActive ? "text-ink-900 font-semibold" : "text-slate-600"
-                }`
-              }
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary font-semibold border-b-2 border-primary pb-0.5"
+                    : "text-on-surface-variant hover:text-primary transition-colors font-medium"
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
 
-        <Link to="/contact" className="btn-primary">
-          Schedule a Consultation
-        </Link>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-md font-semibold text-sm hover:shadow-lg transition-all"
+          >
+            Schedule a Consultation
+          </Link>
+        </div>
       </div>
     </header>
   );

@@ -21,7 +21,7 @@ export default function About() {
     <div>
       <section className="border-b border-slate-200/70 bg-white">
         <div className="container-page grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-5">
+          <div className="space-y-5 reveal">
             <p className="section-kicker">About</p>
             <h1 className="text-4xl font-semibold text-ink-900">
               A regional firm with national-caliber expertise.
@@ -32,7 +32,7 @@ export default function About() {
               that keep leadership aligned and confident.
             </p>
           </div>
-          <div className="card space-y-4 p-6">
+          <div className="card space-y-4 p-6 border border-slate-400 reveal reveal-delay-1">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">
               At a Glance
             </p>
@@ -46,14 +46,14 @@ export default function About() {
       </section>
 
       <section className="container-page py-16">
-        <div className="mb-10">
+        <div className="mb-10 reveal">
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=400&fit=crop"
             alt="Modern office space"
             className="h-80 w-full rounded-2xl object-cover"
           />
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3 reveal reveal-delay-1">
           {values.map((value) => (
             <div key={value.title} className="card p-6">
               <h3 className="text-lg font-semibold text-ink-900">{value.title}</h3>
@@ -65,7 +65,7 @@ export default function About() {
 
       <section className="border-t border-slate-200/70 bg-slate-50">
         <div className="container-page grid gap-8 py-14 md:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-4">
+          <div className="space-y-4 reveal">
             <p className="section-kicker">Leadership</p>
             <h2 className="section-title">
               Senior advisors with deep industry credibility.

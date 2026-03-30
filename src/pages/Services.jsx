@@ -53,7 +53,7 @@ export default function Services() {
     <div>
       <section className="border-b border-slate-200/70 bg-white">
         <div className="container-page grid gap-10 py-16 md:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-5">
+          <div className="space-y-5 reveal">
             <p className="section-kicker">Services</p>
             <h1 className="text-4xl font-semibold text-ink-900">
               A full suite of CPA and advisory services.
@@ -63,7 +63,7 @@ export default function Services() {
               designed to scale with your organization and your leadership team.
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 reveal reveal-delay-1">
             <img
               src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop"
               alt="Team collaboration"
@@ -88,7 +88,7 @@ export default function Services() {
       </section>
 
       <section className="container-page py-16">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 reveal">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
@@ -97,7 +97,7 @@ export default function Services() {
 
       <section className="border-t border-slate-200/70 bg-slate-50">
         <div className="container-page grid gap-8 py-14 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-4">
+          <div className="space-y-4 reveal">
             <p className="section-kicker">Working Together</p>
             <h2 className="section-title">
               Advisory teams built around your business model.

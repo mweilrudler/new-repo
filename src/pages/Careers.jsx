@@ -25,7 +25,7 @@ export default function Careers() {
     <div>
       <section className="border-b border-slate-200/70 bg-white">
         <div className="container-page grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-5">
+          <div className="space-y-5 reveal">
             <p className="section-kicker">Careers</p>
             <h1 className="text-4xl font-semibold text-ink-900">
               Build a career that grows with you.
@@ -35,7 +35,7 @@ export default function Careers() {
               expand advisory impact.
             </p>
           </div>
-          <div className="card space-y-4 p-6">
+          <div className="card space-y-4 p-6 border border-slate-400 reveal reveal-delay-1">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">
               Why Rudler
             </p>
@@ -56,7 +56,7 @@ export default function Careers() {
         />
         <p className="section-kicker">Open Roles</p>
         <h2 className="section-title">Join our team.</h2>
-        <div className="mt-6 grid gap-4">
+        <div className="mt-6 grid gap-4 reveal">
           {roles.map((role) => (
             <div key={role.title} className="card flex flex-wrap items-center justify-between gap-4 p-6">
               <div>
@@ -71,7 +71,7 @@ export default function Careers() {
 
       <section className="border-t border-slate-200/70 bg-slate-50">
         <div className="container-page grid gap-8 py-14 md:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-4">
+          <div className="space-y-4 reveal">
             <p className="section-kicker">Internships</p>
             <h2 className="section-title">
               Launch your career with real client exposure.

@@ -43,7 +43,7 @@ export default function Industries() {
     <div>
       <section className="border-b border-slate-200/70 bg-white">
         <div className="container-page grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-5">
+          <div className="space-y-5 reveal">
             <p className="section-kicker">Industries</p>
             <h1 className="text-4xl font-semibold text-ink-900">
               Industry teams built around your operating reality.
@@ -53,7 +53,7 @@ export default function Industries() {
               financing nuances across every sector we serve.
             </p>
           </div>
-          <div className="card space-y-4 p-6">
+          <div className="card space-y-4 p-6 reveal reveal-delay-1">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">
               Industry Focus
             </p>
@@ -72,7 +72,7 @@ export default function Industries() {
           alt="City skyline"
           className="mb-10 h-64 w-full rounded-2xl object-cover"
         />
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 reveal reveal-delay-1">
           {highlights.map((item) => (
             <div key={item.title} className="card p-6">
               <h3 className="text-lg font-semibold text-ink-900">{item.title}</h3>
@@ -84,7 +84,7 @@ export default function Industries() {
 
       <section className="border-t border-slate-200/70 bg-slate-50">
         <div className="container-page py-16">
-          <p className="section-kicker">Full List</p>
+          <p className="section-kicker reveal">Full List</p>
           <h2 className="section-title">Industries we serve.</h2>
           <div className="mt-6 flex flex-wrap gap-3">
             {industries.map((industry) => (

@@ -1,214 +1,210 @@
 import { Link } from "react-router-dom";
-import ServiceCard from "../components/ServiceCard.jsx";
-import IndustryPill from "../components/IndustryPill.jsx";
-import InsightCard from "../components/InsightCard.jsx";
-import NewsletterSignup from "../components/NewsletterSignup.jsx";
 
-const services = [
+const testimonials = [
   {
-    title: "Advisory & Strategy",
-    description:
-      "Scenario planning, margin analysis, and growth roadmaps tailored to owners and boards.",
+    quote:
+      "Rudler has been our trusted advisor for over a decade. Their depth of knowledge in tax planning has saved us significantly every year.",
+    name: "James Holloway",
+    title: "Owner, Holloway Manufacturing",
   },
   {
-    title: "Tax Planning",
-    description:
-      "Forward-looking tax strategy for entities and owners, aligned with cash flow goals.",
+    quote:
+      "The team at Rudler helped us navigate a complex business acquisition with clarity and confidence. We couldn't have done it without them.",
+    name: "Sarah Mitchell",
+    title: "CEO, Mitchell Properties",
   },
   {
-    title: "Assurance",
-    description:
-      "Audits, reviews, and agreed-upon procedures that build lender and investor confidence.",
-  },
-  {
-    title: "Outsourced Accounting",
-    description:
-      "Monthly close, KPI reporting, and controller support delivered as a steady rhythm.",
-  },
-  {
-    title: "Transaction Support",
-    description:
-      "Quality of earnings, diligence prep, and deal readiness for buyers or sellers.",
-  },
-  {
-    title: "Family Office",
-    description:
-      "Integrated planning for multi-generational wealth, philanthropy, and governance.",
-  },
-];
-
-const industries = [
-  "Manufacturing",
-  "Healthcare",
-  "Construction",
-  "Financial Services",
-  "Technology",
-  "Nonprofits",
-  "Private Equity",
-  "Hospitality",
-  "Real Estate",
-  "Professional Services",
-];
-
-const insights = [
-  {
-    tag: "Tax Update",
-    title: "Three ways to stabilize cash flow before year-end",
-    summary:
-      "A practical checklist for owners looking to pull forward deductions and optimize working capital.",
-    date: "Feb 15, 2026",
-  },
-  {
-    tag: "Advisory",
-    title: "Board-ready dashboards that actually drive decisions",
-    summary:
-      "How to narrow KPIs to the handful that shape pricing, staffing, and investment priorities.",
-    date: "Feb 08, 2026",
-  },
-  {
-    tag: "Assurance",
-    title: "Preparing for your first audit with confidence",
-    summary:
-      "A readiness timeline and document map that helps reduce disruption during fieldwork.",
-    date: "Jan 28, 2026",
+    quote:
+      "From nonprofit compliance to personal tax planning, Rudler handles it all with professionalism and genuine care for our financial wellbeing.",
+    name: "Dr. Karen Wells",
+    title: "Executive Director, Tri-State Outreach",
   },
 ];
 
 export default function Home() {
   return (
-    <div>
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,159,90,0.12),_transparent_55%)]" />
-        <div className="container-page relative grid gap-12 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-24">
-          <div className="space-y-6">
-            <p className="section-kicker">CPA + Advisory</p>
-            <h1 className="text-4xl font-semibold leading-tight text-ink-900 md:text-5xl">
-              Clear financial direction for growth-minded leaders.
+    <>
+      {/* HERO */}
+      <section className="relative w-full min-h-[870px] flex items-center overflow-visible px-12 max-w-[1440px] mx-auto mb-24">
+        <div className="grid grid-cols-12 gap-8 w-full items-center">
+          {/* Text */}
+          <div className="col-span-12 lg:col-span-7 z-10 reveal">
+            <span className="section-kicker">Trusted Advisors Since 1988</span>
+            <h1 className="font-headline text-6xl md:text-7xl lg:text-[5rem] text-on-surface leading-[1.1] mb-8 font-semibold">
+              Financial clarity,{" "}
+              <span className="italic text-primary">built to last.</span>
             </h1>
-            <p className="text-lg text-slate-600">
-              Rudler pairs assurance, tax, and strategic advisory
-              services so you can move faster with fewer surprises.
+            <p className="font-body text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+              Independent CPAs and advisors helping closely held businesses,
+              families, and nonprofits navigate growth with precision and
+              purpose.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link to="/contact" className="btn-primary">
-                Schedule a Consultation
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/services"
+                className="bg-primary text-white px-8 py-4 rounded-md font-semibold text-lg hover:shadow-lg transition-all"
+              >
+                Our Services
               </Link>
-              <Link to="/services" className="btn-outline">
-                Explore Services
+              <Link
+                to="/about"
+                className="bg-surface-container-high text-on-primary-fixed-variant px-8 py-4 rounded-md font-semibold text-lg hover:bg-surface-container-highest transition-all"
+              >
+                Meet the Team
               </Link>
-            </div>
-            <div className="grid gap-6 pt-8 text-sm text-slate-600 md:grid-cols-3">
-              <div className="space-y-1">
-                <p className="text-2xl font-semibold text-ink-900">45+</p>
-                <p>Professionals across assurance and advisory</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-2xl font-semibold text-ink-900">12</p>
-                <p>Industry specialty teams</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-2xl font-semibold text-ink-900">1</p>
-                <p>Office location with local reach</p>
-              </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="absolute -left-6 top-10 h-32 w-32 rounded-full bg-accent-500/20 blur-3xl" />
-            <img
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop"
-              alt="Business meeting"
-              className="mb-6 h-64 w-full rounded-2xl object-cover"
-            />
-            <div className="card relative space-y-6 p-8">
-              <div className="space-y-3">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">
-                  Advisory Snapshot
-                </p>
-                <h2 className="text-2xl font-semibold text-ink-900">
-                  Your finance team, elevated.
-                </h2>
-                <p className="text-sm text-slate-600">
-                  We build dashboards, operational cadences, and tax strategies that
-                  align your leadership team around a single plan.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-                <p className="text-xs uppercase tracking-[0.2em] text-forest-600">
-                  90-day focus
-                </p>
-                <p className="mt-2 text-sm text-ink-900">
-                  - Profitability review
-                  <br />- Cash conversion targets
-                  <br />- Board reporting refresh
-                </p>
-              </div>
-              <div className="flex items-center justify-between text-xs text-slate-500">
-                <span>Advisory + Assurance + Tax</span>
-                <span>Confidential</span>
-              </div>
+
+          {/* Image + vellum card */}
+          <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0 reveal reveal-delay-2">
+            <div className="aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden relative shadow-2xl">
+              <img
+                alt="Professional office environment"
+                className="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtgpEgCXE_PgMv8gIYyiTyAkVu_LdUkTlssXEKkPsr5YEK7ayY78UaKBcfZ0r-8Q2ubJS-JfzwZ9Ggspk1hzAIf7l5Mjy7yyq-n-_9TxpW04i2oRm6uIJiLbvNptGZVi2lY1H7mrx6d1tfZ3L5V2eZscTmAHueuBofkbDjvyAfwXJ6QvjqHYJfFeWTy5ogx8EoKddOG_JFe9Xim8qR0V5PQFBqg2zk_YaeX_u8RvtappxC6bReCn1btU9JleF_aocmzFyhDBZLsdA"
+              />
+              <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
+            </div>
+            <div className="absolute -bottom-8 -left-8 vellum-layer bg-white/80 p-8 rounded-xl shadow-xl max-w-[260px] border border-white/20 reveal reveal-delay-3">
+              <p className="font-headline text-3xl font-bold text-ink-900 mb-1">35+</p>
+              <p className="text-xs uppercase tracking-[0.15em] text-on-surface-variant">
+                Years Serving the Region
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="container-page py-16">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="section-kicker">Services</p>
-            <h2 className="section-title">A full advisory platform for owners.</h2>
-          </div>
-          <Link to="/services" className="btn-outline">
-            View all services
-          </Link>
-        </div>
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
-          ))}
-        </div>
-      </section>
-
-      <section className="border-y border-slate-200/70 bg-white">
-        <div className="container-page py-16">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="section-kicker">Industries</p>
-              <h2 className="section-title">
-                Specialists who speak your operating language.
-              </h2>
+      {/* INSIGHTS BENTO GRID */}
+      <section className="bg-surface-container-low py-24 px-12">
+        <div className="max-w-[1440px] mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+            <div className="max-w-2xl">
+              <h2 className="section-title mb-4">Latest Insights</h2>
+              <p className="text-on-surface-variant text-lg">
+                Perspectives on tax, advisory, and the challenges facing growing
+                businesses.
+              </p>
             </div>
-            <Link to="/industries" className="btn-outline">
-              Explore industries
+            <Link
+              to="/insights"
+              className="text-primary font-semibold flex items-center gap-2 border-b-2 border-primary pb-1 hover:opacity-80 transition-opacity whitespace-nowrap"
+            >
+              View All Insights →
             </Link>
           </div>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {industries.map((industry) => (
-              <IndustryPill key={industry} label={industry} />
-            ))}
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Feature card */}
+            <div className="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all reveal reveal-delay-1">
+              <div>
+                <span className="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter mb-6 inline-block">
+                  Tax Planning
+                </span>
+                <h3 className="font-headline text-3xl mb-4 group-hover:text-primary transition-colors">
+                  Year-End Tax Strategies for Closely Held Businesses
+                </h3>
+                <p className="text-on-surface-variant text-lg max-w-xl">
+                  Key opportunities to reduce your tax burden before year-end
+                  — from retirement contributions to equipment purchases and
+                  entity structuring.
+                </p>
+              </div>
+              <div className="mt-12 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-sm font-bold text-white font-headline">
+                  R
+                </div>
+                <div>
+                  <p className="font-semibold text-sm">Rudler CPA</p>
+                  <p className="text-xs uppercase tracking-widest text-outline">
+                    Advisory Team
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Side stack */}
+            <div className="flex flex-col gap-8">
+              <div className="bg-primary p-8 rounded-xl text-white flex flex-col justify-between flex-1 cursor-pointer overflow-hidden relative group reveal reveal-delay-2">
+                <div className="relative z-10">
+                  <h3 className="font-headline text-2xl mb-3 leading-tight">
+                    Nonprofit Compliance Essentials
+                  </h3>
+                  <p className="text-primary-fixed-dim text-sm">
+                    Staying ahead of reporting requirements and governance best
+                    practices.
+                  </p>
+                </div>
+                <div className="text-7xl font-headline opacity-10 absolute -bottom-4 -right-4 group-hover:scale-110 transition-transform select-none leading-none">
+                  §
+                </div>
+              </div>
+              <div className="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-secondary flex flex-col justify-between flex-1 cursor-pointer hover:bg-white transition-colors reveal reveal-delay-3">
+                <h3 className="font-headline text-2xl mb-3">
+                  Planning for Business Transitions
+                </h3>
+                <p className="text-on-surface-variant text-sm italic">
+                  "A clear plan today protects the value you've built for
+                  years."
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="container-page py-16">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="section-kicker">Insights</p>
-            <h2 className="section-title">Thought leadership that is ready to use.</h2>
-          </div>
-          <Link to="/insights" className="btn-outline">
-            Read insights
-          </Link>
+      {/* TESTIMONIALS */}
+      <section className="py-32 px-12 max-w-[1440px] mx-auto">
+        <div className="text-center mb-20 reveal">
+          <span className="section-kicker">Client Perspectives</span>
+          <h2 className="section-title italic">What Our Clients Say</h2>
         </div>
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {insights.map((insight) => (
-            <InsightCard key={insight.title} {...insight} />
+
+        <div className="grid md:grid-cols-3 gap-12">
+          {testimonials.map((t, i) => (
+            <div key={i} className={`relative reveal reveal-delay-${i + 1}`}>
+              <div className="absolute -top-6 -left-4 text-7xl font-headline text-surface-container-highest leading-none select-none">
+                &ldquo;
+              </div>
+              <div className="pt-8">
+                <p className="font-headline text-xl leading-relaxed text-on-surface-variant mb-8 italic">
+                  {t.quote}
+                </p>
+                <div className="border-t border-outline-variant pt-6">
+                  <p className="font-body font-bold text-primary">{t.name}</p>
+                  <p className="text-xs uppercase tracking-widest text-outline">
+                    {t.title}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </section>
 
-      <section className="container-page pb-20">
-        <NewsletterSignup />
+      {/* CTA */}
+      <section className="mb-24 px-12 max-w-[1440px] mx-auto reveal">
+        <div className="bg-ink-900 rounded-2xl overflow-hidden relative p-16 md:p-24 text-center">
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="font-headline text-4xl md:text-6xl text-white mb-8 leading-tight">
+              Ready to strengthen your{" "}
+              <span className="text-secondary-fixed-dim italic">
+                financial foundation?
+              </span>
+            </h2>
+            <p className="text-primary-fixed-dim text-lg mb-12">
+              Connect with our team for a comprehensive review of your tax,
+              advisory, and accounting needs.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block bg-secondary text-white px-10 py-5 rounded-md font-bold text-xl hover:bg-forest-500 transition-all shadow-xl"
+            >
+              Schedule a Consultation
+            </Link>
+          </div>
+        </div>
       </section>
-    </div>
+    </>
   );
 }

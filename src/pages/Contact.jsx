@@ -13,7 +13,7 @@ export default function Contact() {
     <div>
       <section className="border-b border-slate-200/70 bg-white">
         <div className="container-page grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-5">
+          <div className="space-y-5 reveal">
             <p className="section-kicker">Contact</p>
             <h1 className="text-4xl font-semibold text-ink-900">
               Let's talk about your next chapter.
@@ -23,7 +23,7 @@ export default function Contact() {
               We will respond within one business day.
             </p>
           </div>
-          <div className="card space-y-4 p-6">
+          <div className="card space-y-4 p-6 border border-slate-400 reveal reveal-delay-1">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">
               Ft Wright Office
             </p>
@@ -38,7 +38,7 @@ export default function Contact() {
       </section>
 
       <section className="container-page grid gap-8 py-16 md:grid-cols-[1fr_1fr]">
-        <div className="space-y-6">
+        <div className="space-y-6 reveal">
           <p className="section-kicker">Office Location</p>
           <h2 className="section-title">Local reach with a single office.</h2>
           <img
@@ -61,7 +61,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="card p-6">
+        <div className="card p-6 reveal reveal-delay-1">
           <p className="section-kicker">Start Here</p>
           <h2 className="text-2xl font-semibold text-ink-900">
             Schedule a consultation
