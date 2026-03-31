@@ -35,7 +35,7 @@ export default function Footer() {
     <>
       <div className="bg-white border-t border-slate-200 py-8">
         <div className="container-page">
-          <div className="flex flex-wrap justify-center items-center gap-16">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
             {awards.map((award) => (
               <img
                 key={award.alt}

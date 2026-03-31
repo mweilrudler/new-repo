@@ -70,7 +70,7 @@ export default function Industries() {
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=400&fit=crop"
           alt="City skyline"
-          className="mb-10 h-64 w-full rounded-2xl object-cover"
+          className="mb-10 h-40 md:h-64 w-full rounded-2xl object-cover"
         />
         <div className="grid gap-6 md:grid-cols-2 reveal reveal-delay-1">
           {highlights.map((item) => (

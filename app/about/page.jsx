@@ -50,7 +50,7 @@ export default function About() {
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=400&fit=crop"
             alt="Modern office space"
-            className="h-80 w-full rounded-2xl object-cover"
+            className="h-48 md:h-80 w-full rounded-2xl object-cover"
           />
         </div>
         <div className="grid gap-6 md:grid-cols-3 reveal reveal-delay-1">

@@ -51,7 +51,7 @@ export default function Client() {
       </section>
 
       {/* Cards */}
-      <section className="px-12 py-20 max-w-[1440px] mx-auto">
+      <section className="px-6 py-12 md:px-12 md:py-20 max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-3 gap-8 reveal reveal-delay-1">
           {clientLinks.map((link) => (
             <a
@@ -81,7 +81,7 @@ export default function Client() {
         </div>
 
         {/* Help callout */}
-        <div className="mt-16 bg-surface-container-low rounded-xl reveal reveal-delay-2 p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-16 bg-surface-container-low rounded-xl reveal reveal-delay-2 p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-headline text-xl text-on-surface font-semibold mb-1">
               Need help accessing your account?

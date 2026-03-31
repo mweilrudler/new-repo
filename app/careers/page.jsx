@@ -52,7 +52,7 @@ export default function Careers() {
         <img
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=400&fit=crop"
           alt="Team working together"
-          className="mb-10 h-80 w-full rounded-2xl object-cover"
+          className="mb-10 h-48 md:h-80 w-full rounded-2xl object-cover"
         />
         <p className="section-kicker">Open Roles</p>
         <h2 className="section-title">Join our team.</h2>

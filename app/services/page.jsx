@@ -67,7 +67,7 @@ export default function Services() {
             <img
               src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop"
               alt="Team collaboration"
-              className="h-56 w-full rounded-2xl object-cover"
+              className="h-40 md:h-56 w-full rounded-2xl object-cover"
             />
             <div className="card space-y-4 p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">

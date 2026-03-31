@@ -1,12 +1,11 @@
 # Rudler Website
 
-Marketing website for Rudler PSC, a CPA and advisory firm. Built as a static React SPA.
+Marketing website for Rudler PSC, a CPA and advisory firm.
 
 ## Tech Stack
 
+- Next.js 16
 - React 18
-- Vite 5
-- React Router v6
 - Tailwind CSS 3
 
 ## Local Setup
@@ -29,11 +28,11 @@ Marketing website for Rudler PSC, a CPA and advisory firm. Built as a static Rea
    npm run dev
    ```
 
-   The site will be available at `http://localhost:5173`
+   The site will be available at `http://localhost:3000`
 
 ## Other Commands
 
 ```bash
-npm run build    # Production build to dist/
-npm run preview  # Preview the production build locally
+npm run build    # Production build
+npm start        # Start the production server
 ```

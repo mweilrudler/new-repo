@@ -26,12 +26,12 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative w-full min-h-[870px] flex items-center overflow-visible px-12 max-w-[1440px] mx-auto mb-24">
-        <div className="grid grid-cols-12 gap-8 w-full items-center">
+      <section className="relative w-full md:min-h-[870px] flex items-center overflow-visible px-6 md:px-12 max-w-[1440px] mx-auto mb-12 md:mb-24">
+        <div className="grid grid-cols-12 gap-y-8 lg:gap-8 w-full items-center">
           {/* Text */}
           <div className="col-span-12 lg:col-span-7 z-10 reveal">
             <span className="section-kicker">Trusted Advisors Since 1988</span>
-            <h1 className="font-headline text-6xl md:text-7xl lg:text-[5rem] text-on-surface leading-[1.1] mb-8 font-semibold">
+            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
               Financial clarity,{" "}
               <span className="italic text-primary">built to last.</span>
             </h1>
@@ -43,13 +43,13 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services"
-                className="bg-primary text-white px-8 py-4 rounded-md font-semibold text-lg hover:shadow-lg transition-all"
+                className="bg-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-md font-semibold text-base md:text-lg hover:shadow-lg transition-all"
               >
                 Our Services
               </Link>
               <Link
                 href="/about"
-                className="bg-surface-container-high text-on-primary-fixed-variant px-8 py-4 rounded-md font-semibold text-lg hover:bg-surface-container-highest transition-all"
+                className="bg-surface-container-high text-on-primary-fixed-variant px-6 py-3 md:px-8 md:py-4 rounded-md font-semibold text-base md:text-lg hover:bg-surface-container-highest transition-all"
               >
                 Meet the Team
               </Link>
@@ -66,7 +66,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
             </div>
-            <div className="absolute -bottom-8 -left-8 vellum-layer bg-white/80 p-8 rounded-xl shadow-xl max-w-[260px] border border-white/20 reveal reveal-delay-3">
+            <div className="absolute bottom-4 left-4 md:-bottom-8 md:-left-8 vellum-layer bg-white/80 p-5 md:p-8 rounded-xl shadow-xl max-w-[180px] md:max-w-[260px] border border-white/20 reveal reveal-delay-3">
               <p className="font-headline text-3xl font-bold text-ink-900 mb-1">35+</p>
               <p className="text-xs uppercase tracking-[0.15em] text-on-surface-variant">
                 Years Serving the Region
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* INSIGHTS BENTO GRID */}
-      <section className="bg-surface-container-low py-24 px-12">
+      <section className="bg-surface-container-low py-16 md:py-24 px-6 md:px-12">
         <div className="max-w-[1440px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
             <div className="max-w-2xl">
@@ -97,7 +97,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature card */}
-            <div className="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all reveal reveal-delay-1">
+            <div className="md:col-span-2 bg-surface-container-lowest p-6 md:p-10 rounded-xl flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all reveal reveal-delay-1">
               <div>
                 <span className="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter mb-6 inline-block">
                   Tax Planning
@@ -155,13 +155,13 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-32 px-12 max-w-[1440px] mx-auto">
+      <section className="py-16 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto">
         <div className="text-center mb-20 reveal">
           <span className="section-kicker">Client Perspectives</span>
           <h2 className="section-title italic">What Our Clients Say</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {testimonials.map((t, i) => (
             <div key={i} className={`relative reveal reveal-delay-${i + 1}`}>
               <div className="absolute -top-6 -left-4 text-7xl font-headline text-surface-container-highest leading-none select-none">
@@ -184,8 +184,8 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="mb-24 px-12 max-w-[1440px] mx-auto reveal">
-        <div className="bg-ink-900 rounded-2xl overflow-hidden relative p-16 md:p-24 text-center">
+      <section className="mb-12 md:mb-24 px-6 md:px-12 max-w-[1440px] mx-auto reveal">
+        <div className="bg-ink-900 rounded-2xl overflow-hidden relative p-8 sm:p-16 md:p-24 text-center">
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="font-headline text-4xl md:text-6xl text-white mb-8 leading-tight">
               Ready to strengthen your{" "}
@@ -199,7 +199,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-secondary text-white px-10 py-5 rounded-md font-bold text-xl hover:bg-forest-500 transition-all shadow-xl"
+              className="inline-block bg-secondary text-white px-6 py-4 md:px-10 md:py-5 rounded-md font-bold text-lg md:text-xl hover:bg-forest-500 transition-all shadow-xl"
             >
               Schedule a Consultation
             </Link>
