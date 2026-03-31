@@ -1,4 +1,4 @@
-import IndustryPill from "../components/IndustryPill.jsx";
+import IndustryPill from "/components/IndustryPill.jsx";
 
 const industries = [
   "Manufacturing",

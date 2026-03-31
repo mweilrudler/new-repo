@@ -1,24 +1,14 @@
-import { Link } from "react-router-dom";
-import bkr from "../assets/images/BKR-Logo.jpg";
-
-import arizent from "../assets/images/2025_ARIZENT_AT_BEST-FIRMS-TO-WORK-FOR.png";
-import youngAccountants from "../assets/images/2025-ACCOUNTING-TODAY_BEST-FIRMS-FOR-YOUNG-ACCOUNTANTS_LOGO_RGB-cropped.png";
-import ipa500 from "../assets/images/IPA-Award-Logo-Top-500-Firms.png";
-import bestNky2024 from "../assets/images/2024-Best-NKY-logo.jpg";
-import bestInCincy from "../assets/images/best-in-cincy-business-snapshot.png";
-import familyChoice from "../assets/images/family-choice-awards-screen-shot.png";
-import ipa400 from "../assets/images/2021_IPA-400_JPG-compressed.jpg";
-import nkyChamber from "../assets/images/nky-chamber.jpg";
+import Link from "next/link";
 
 const awards = [
-  { src: arizent, alt: "2025 Arizent Best Firms to Work For" },
-  { src: youngAccountants, alt: "2025 Accounting Today Best Firms for Young Accountants" },
-  { src: ipa500, alt: "IPA Top 500 Firms" },
-  { src: bestNky2024, alt: "2024 Best of NKY" },
-  { src: bestInCincy, alt: "Best in Cincinnati Business" },
-  { src: familyChoice, alt: "Family Choice Awards" },
-  { src: ipa400, alt: "2021 IPA 400" },
-  { src: nkyChamber, alt: "NKY Chamber" },
+  { src: "/images/2025_ARIZENT_AT_BEST-FIRMS-TO-WORK-FOR.png", alt: "2025 Arizent Best Firms to Work For" },
+  { src: "/images/2025-ACCOUNTING-TODAY_BEST-FIRMS-FOR-YOUNG-ACCOUNTANTS_LOGO_RGB-cropped.png", alt: "2025 Accounting Today Best Firms for Young Accountants" },
+  { src: "/images/IPA-Award-Logo-Top-500-Firms.png", alt: "IPA Top 500 Firms" },
+  { src: "/images/2024-Best-NKY-logo.jpg", alt: "2024 Best of NKY" },
+  { src: "/images/best-in-cincy-business-snapshot.png", alt: "Best in Cincinnati Business" },
+  { src: "/images/family-choice-awards-screen-shot.png", alt: "Family Choice Awards" },
+  { src: "/images/2021_IPA-400_JPG-compressed.jpg", alt: "2021 IPA 400" },
+  { src: "/images/nky-chamber.jpg", alt: "NKY Chamber" },
 ];
 
 const services = ["Assurance", "Tax Planning", "Advisory", "Outsourced Accounting"];
@@ -71,7 +61,7 @@ export default function Footer() {
           </p>
           <div className="mt-6 flex items-center gap-4">
             <a href="https://bkr.com/" target="_blank" rel="noopener noreferrer">
-              <img src={bkr} alt="BKR International" className="h-10 w-auto object-contain" />
+              <img src="/images/BKR-Logo.jpg" alt="BKR International" className="h-10 w-auto object-contain" />
             </a>
             <a href="https://www.facebook.com/AccountingRudlerPSC/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-on-surface-variant hover:text-primary transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
@@ -100,7 +90,7 @@ export default function Footer() {
             {services.map((s) => (
               <li key={s}>
                 <Link
-                  to="/services"
+                  href="/services"
                   className="text-sm text-on-surface-variant hover:text-primary transition-colors"
                 >
                   {s}
@@ -119,7 +109,7 @@ export default function Footer() {
             {firmLinks.map((link) => (
               <li key={link.to}>
                 <Link
-                  to={link.to}
+                  href={link.to}
                   className="text-sm text-on-surface-variant hover:text-primary transition-colors"
                 >
                   {link.label}

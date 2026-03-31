@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import OfficePhoto from "../assets/images/OfficePhoto.png";
+import  Link  from "next/link";
 
 
 const testimonials = [
@@ -43,13 +42,13 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/services"
+                href="/services"
                 className="bg-primary text-white px-8 py-4 rounded-md font-semibold text-lg hover:shadow-lg transition-all"
               >
                 Our Services
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="bg-surface-container-high text-on-primary-fixed-variant px-8 py-4 rounded-md font-semibold text-lg hover:bg-surface-container-highest transition-all"
               >
                 Meet the Team
@@ -63,7 +62,7 @@ export default function Home() {
               <img
                 alt="Professional office environment"
                 className="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
-                src={OfficePhoto}
+                src="/images/OfficePhoto.png"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
             </div>
@@ -89,7 +88,7 @@ export default function Home() {
               </p>
             </div>
             <Link
-              to="/insights"
+              href="/insights"
               className="text-primary font-semibold flex items-center gap-2 border-b-2 border-primary pb-1 hover:opacity-80 transition-opacity whitespace-nowrap"
             >
               View All Insights →
@@ -199,7 +198,7 @@ export default function Home() {
               advisory, and accounting needs.
             </p>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-block bg-secondary text-white px-10 py-5 rounded-md font-bold text-xl hover:bg-forest-500 transition-all shadow-xl"
             >
               Schedule a Consultation

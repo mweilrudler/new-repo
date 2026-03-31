@@ -1,5 +1,5 @@
-import InsightCard from "../components/InsightCard.jsx";
-import NewsletterSignup from "../components/NewsletterSignup.jsx";
+import InsightCard from "/components/InsightCard.jsx";
+import NewsletterSignup from "/components/NewsletterSignup.jsx";
 
 const insights = [
   {
