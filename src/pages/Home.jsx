@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import OfficePhoto from "../assets/images/OfficePhoto.png";
+
 
 const testimonials = [
   {
@@ -61,7 +63,7 @@ export default function Home() {
               <img
                 alt="Professional office environment"
                 className="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtgpEgCXE_PgMv8gIYyiTyAkVu_LdUkTlssXEKkPsr5YEK7ayY78UaKBcfZ0r-8Q2ubJS-JfzwZ9Ggspk1hzAIf7l5Mjy7yyq-n-_9TxpW04i2oRm6uIJiLbvNptGZVi2lY1H7mrx6d1tfZ3L5V2eZscTmAHueuBofkbDjvyAfwXJ6QvjqHYJfFeWTy5ogx8EoKddOG_JFe9Xim8qR0V5PQFBqg2zk_YaeX_u8RvtappxC6bReCn1btU9JleF_aocmzFyhDBZLsdA"
+                src={OfficePhoto}
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
             </div>
