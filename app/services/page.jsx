@@ -1,5 +1,10 @@
 import ServiceCard from "/components/ServiceCard.jsx";
 
+export const metadata = {
+  title: "Services",
+  description: "TODO — awaiting final copy from marketing team.",
+};
+
 const services = [
   {
     title: "Assurance Services",

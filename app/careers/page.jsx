@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Careers",
+  description: "TODO — awaiting final copy from marketing team.",
+};
+
 export default function Careers() {
   const roles = [
     {

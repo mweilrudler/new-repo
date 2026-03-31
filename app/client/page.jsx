@@ -34,6 +34,11 @@ const clientLinks = [
   },
 ];
 
+export const metadata = {
+  title: "Client Access",
+  robots: { index: false, follow: false },
+};
+
 export default function Client() {
   return (
     <>

@@ -1,6 +1,11 @@
 import InsightCard from "/components/InsightCard.jsx";
 import NewsletterSignup from "/components/NewsletterSignup.jsx";
 
+export const metadata = {
+  title: "Insights",
+  description: "TODO — awaiting final copy from marketing team.",
+};
+
 const insights = [
   {
     tag: "Tax Strategy",

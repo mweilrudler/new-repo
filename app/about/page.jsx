@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "About Us",
+  description: "TODO — awaiting final copy from marketing team.",
+};
+
 export default function About() {
   const values = [
     {

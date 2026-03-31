@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Contact",
+  description: "TODO — awaiting final copy from marketing team.",
+};
+
 export default function Contact() {
   const offices = [
     {

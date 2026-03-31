@@ -1,5 +1,10 @@
 import IndustryPill from "/components/IndustryPill.jsx";
 
+export const metadata = {
+  title: "Industries",
+  description: "TODO — awaiting final copy from marketing team.",
+};
+
 const industries = [
   "Manufacturing",
   "Distribution & Logistics",

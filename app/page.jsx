@@ -1,4 +1,5 @@
-import  Link  from "next/link";
+import Link from "next/link";
+import Image from "next/image";
 
 
 const testimonials = [
@@ -59,10 +60,12 @@ export default function Home() {
           {/* Image + vellum card */}
           <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0 reveal reveal-delay-2">
             <div className="aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden relative shadow-2xl">
-              <img
+              <Image
                 alt="Professional office environment"
-                className="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
+                className="object-cover grayscale-[15%] contrast-[1.05]"
                 src="/images/OfficePhoto.png"
+                fill
+                priority
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
             </div>
