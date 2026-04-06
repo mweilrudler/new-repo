@@ -7,16 +7,43 @@ export default function RevealObserver() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const els = document.querySelectorAll(".reveal");
     const obs = new IntersectionObserver(
       (entries) =>
         entries.forEach(
-          (e) => e.isIntersecting && e.target.classList.add("active")
+          (e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("active");
+              obs.unobserve(e.target);
+            }
+          }
         ),
       { threshold: 0.15 }
     );
-    els.forEach((el) => obs.observe(el));
-    return () => obs.disconnect();
+
+    const observeRevealElements = () => {
+      const els = document.querySelectorAll(".reveal");
+      els.forEach((el) => {
+        if (!el.classList.contains("active")) {
+          obs.observe(el);
+        }
+      });
+    };
+
+    observeRevealElements();
+
+    const mutationObserver = new MutationObserver(() => {
+      observeRevealElements();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      mutationObserver.disconnect();
+      obs.disconnect();
+    };
   }, [pathname]);
 
   return null;

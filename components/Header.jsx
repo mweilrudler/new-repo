@@ -59,10 +59,10 @@ export default function Header() {
       <div className="bg-white/95 backdrop-blur-md shadow-[0_20px_40px_rgba(13,32,59,0.06)]">
         <div className="container-page flex items-center justify-between gap-4 py-4">
           <Link href="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <img src="/rudler.svg" alt="Rudler Logo" className="h-9 w-auto object-contain" />
+            <img src="/rudler.svg" alt="Rudler Logo" className="h-11 w-auto object-contain" />
             <div>
-              <p className="text-base font-semibold text-primary">Rudler</p>
-              <p className="text-xs uppercase tracking-[0.3em] text-primary/70">CPA + Advisory</p>
+              <p className="text-lg font-semibold text-primary">Rudler</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-primary/70">CPA + Advisory</p>
             </div>
           </Link>
 
