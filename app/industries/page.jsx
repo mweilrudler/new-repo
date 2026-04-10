@@ -1,4 +1,4 @@
-import IndustryPill from "/components/IndustryPill.jsx";
+import IndustryPill from "../../components/IndustryPill.jsx"
 
 export const metadata = {
   title: "Industries",
