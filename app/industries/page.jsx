@@ -1,4 +1,6 @@
 import Link from "next/link";
+import IndustryPill from "../../components/IndustryPill.jsx"
+
 
 export const metadata = {
   title: "Industries | Rudler, PSC",

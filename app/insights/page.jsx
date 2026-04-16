@@ -1,5 +1,5 @@
-import InsightCard from "../../components/InsightCard";
-import NewsletterSignup from "../../components/NewsletterSignup";
+import InsightCard from "../../components/InsightCard.jsx";
+import NewsletterSignup from "../../components/NewsletterSignup.jsx";
 
 export const metadata = {
   title: "Insights",
