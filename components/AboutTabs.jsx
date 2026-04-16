@@ -134,7 +134,7 @@ export default function AboutTabs() {
         const top =
           tabContentTopRef.current.getBoundingClientRect().top +
           window.scrollY -
-          140;
+          190;
         window.scrollTo({ top: Math.max(top, 0), behavior: "auto" });
       });
     });
@@ -186,7 +186,7 @@ export default function AboutTabs() {
       </section>
 
       {/* Tab strip */}
-      <div className="sticky top-28 z-40 bg-white border-b border-slate-200 shadow-sm">
+      <div className="sticky top-32 z-40 bg-white border-b border-slate-200 shadow-sm">
         <div className="container-page flex gap-0">
           {tabs.map((tab, i) => (
             <button

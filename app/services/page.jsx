@@ -1,126 +1,148 @@
-import ServiceCard from "/components/ServiceCard.jsx";
+import Link from "next/link";
 
 export const metadata = {
-  title: "Services",
-  description: "TODO — awaiting final copy from marketing team.",
+  title: "Services | Rudler, PSC",
+  description:
+    "Tax, audit and assurance, advisory and consulting, and business valuation services for businesses, individuals, and not-for-profit organizations.",
 };
 
 const services = [
   {
-    title: "Assurance Services",
+    title: "Tax Services",
+    href: "/services/tax",
+    imageSrc:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Tax professional reviewing a stack of financial reports",
     description:
-      "Audit, review, and agreed-upon procedures that align with lenders, investors, and regulators.",
+      "Proactive tax planning and compliance for businesses, individuals, and families — combining technical expertise with year-round advisory support.",
+    bullets: [
+      "Entity structuring and multi-state compliance",
+      "Individual, estate, and wealth transfer planning",
+      "SALT planning and audit representation",
+    ],
   },
   {
-    title: "Tax Planning & Compliance",
+    title: "Audit & Assurance",
+    href: "/services/audit-and-assurance",
+    imageSrc:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Audit team discussing financial statements in a conference room",
     description:
-      "Entity and individual planning, multistate compliance, and year-round advisory support.",
+      "Reliable, objective reporting and benefit plan audits that deliver clarity, confidence, and insight into your financial operations.",
+    bullets: [
+      "Financial statement audits, reviews, and compilations",
+      "Employee benefit plan audits",
+      "Internal control and risk assessments",
+    ],
   },
   {
-    title: "Advisory & CFO Support",
+    title: "Advisory & Consulting",
+    href: "/services/advisory-and-consulting",
+    imageSrc:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Business consultants collaborating on strategy with leadership",
     description:
-      "Strategic planning, KPI dashboards, and leadership coaching for owners and executives.",
+      "Strategic guidance that goes beyond accounting — including Efficient CFO services, Virtual Back Office, and strategic growth advisory.",
+    bullets: [
+      "Efficient CFO services",
+      "Virtual Back Office",
+      "Strategic growth and transition planning",
+    ],
   },
   {
-    title: "Outsourced Accounting",
+    title: "Business Valuation",
+    href: "/services/business-valuation",
+    imageSrc:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Business valuation charts on screen during a financial analysis",
     description:
-      "Close management, reconciliations, and financial reporting built for decision-making.",
-  },
-  {
-    title: "Transaction Advisory",
-    description:
-      "Quality of earnings, buy-side diligence, and readiness for recapitalization or sale.",
-  },
-  {
-    title: "Risk & Compliance",
-    description:
-      "Internal controls, SOC readiness, and compliance assessments for scaling organizations.",
-  },
-  {
-    title: "Wealth & Family Office",
-    description:
-      "Integrated planning, reporting, and governance for multi-entity families and foundations.",
-  },
-  {
-    title: "State & Local Tax",
-    description:
-      "Nexus reviews, credit opportunities, and representation for audits or disputes.",
-  },
-  {
-    title: "Advisory Projects",
-    description:
-      "Margin resets, cash conversion improvement, and pricing strategy engagements.",
+      "Comprehensive, defensible valuations to support transactions, succession planning, lending, and strategic decisions.",
+    bullets: [
+      "Full valuation and calculation of value reports",
+      "Estate, gift, and succession planning",
+      "M&A, ESOP, and shareholder disputes",
+    ],
   },
 ];
 
 export default function Services() {
   return (
-    <div>
-      <section className="border-b border-slate-200/70 bg-white">
-        <div className="container-page grid gap-10 py-16 md:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-5 reveal">
-            <p className="section-kicker">Services</p>
-            <h1 className="text-4xl font-semibold text-ink-900">
-              A full suite of CPA and advisory services.
-            </h1>
-            <p className="text-lg text-slate-600">
-              From assurance to strategic advisory, we deliver service categories
-              designed to scale with your organization and your leadership team.
-            </p>
-          </div>
-          <div className="space-y-6 reveal reveal-delay-1">
-            <img
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop"
-              alt="Team collaboration"
-              className="h-40 md:h-56 w-full rounded-2xl object-cover"
-            />
-            <div className="card space-y-4 p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest-600">
-                Engagement Model
-              </p>
-            <p className="text-sm text-slate-600">
-              Choose a recurring advisory cadence or targeted project support. We
-              integrate with your internal team and move at your pace.
-            </p>
-            <ul className="space-y-2 text-sm text-ink-900">
-              <li>Dedicated advisory partner</li>
-              <li>Shared project roadmap</li>
-              <li>Monthly performance reviews</li>
-            </ul>
-            </div>
-          </div>
+    <>
+      {/* HERO */}
+      <section className="relative w-full bg-surface-container-low py-20 md:py-28 px-6 md:px-12">
+        <div className="max-w-[1100px] mx-auto text-center reveal">
+          <span className="section-kicker">Our Services</span>
+          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
+            Accounting & Advisory Services That Move You Forward
+          </h1>
+          <p className="font-body text-lg md:text-xl text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+            We offer a full range of services to support your financial goals — whether you're managing day-to-day operations, navigating complex decisions, or planning for growth.
+          </p>
         </div>
       </section>
 
-      <section className="container-page py-16">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 reveal">
+      {/* SERVICES GRID */}
+      <section className="py-20 md:py-28 px-6 md:px-12 max-w-[1440px] mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 reveal">
           {services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
+            <Link
+              key={service.href}
+              href={service.href}
+              className="group overflow-hidden rounded-2xl bg-surface-container-lowest shadow-[0_20px_40px_rgba(13,32,59,0.06)] border border-outline-variant/20 flex flex-col transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="aspect-[16/10] overflow-hidden bg-surface-container-highest">
+                <img
+                  src={service.imageSrc}
+                  alt={service.imageAlt}
+                  className="h-full w-full object-cover grayscale-[8%] transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-8 md:p-10 flex flex-col gap-4 flex-1">
+                <h2 className="font-headline text-2xl md:text-3xl font-semibold text-ink-900">
+                  {service.title}
+                </h2>
+                <p className="text-on-surface-variant leading-relaxed">{service.description}</p>
+                <ul className="space-y-2 mt-2 flex-1">
+                  {service.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3 text-sm text-slate-600 leading-relaxed">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <span className="inline-flex items-center gap-2 mt-4 text-primary font-semibold transition-all group-hover:gap-3">
+                  Learn More →
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-slate-200/70 bg-slate-50">
-        <div className="container-page grid gap-8 py-14 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-4 reveal">
-            <p className="section-kicker">Working Together</p>
-            <h2 className="section-title">
-              Advisory teams built around your business model.
+      {/* CTA */}
+      <section className="mb-12 md:mb-24 px-6 md:px-12 max-w-[1440px] mx-auto reveal">
+        <div className="bg-ink-900 rounded-2xl overflow-hidden relative p-8 sm:p-16 md:p-24 text-center">
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="font-headline text-4xl md:text-6xl text-white mb-8 leading-tight">
+              Ready to strengthen your{" "}
+              <span className="text-secondary-fixed-dim italic">
+                financial foundation?
+              </span>
             </h2>
-            <p className="text-sm text-slate-600">
-              We match you with industry specialists and service leads so your
-              engagement is cohesive and proactive.
+            <p className="text-primary-fixed-dim text-lg mb-12">
+              Connect with our team for a comprehensive review of your tax,
+              advisory, and accounting needs.
             </p>
-          </div>
-          <div className="card space-y-4 p-6">
-            <p className="text-sm text-slate-600">
-              Ready to plan your next quarter? Our advisory leads can build a
-              roadmap in a single discovery session.
-            </p>
-            <button className="btn-primary">Schedule a Consultation</button>
+            <Link
+              href="/contact"
+              className="inline-block bg-secondary text-white px-6 py-4 md:px-10 md:py-5 rounded-md font-bold text-lg md:text-xl hover:bg-forest-500 transition-all shadow-xl"
+            >
+              Schedule a Consultation
+            </Link>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

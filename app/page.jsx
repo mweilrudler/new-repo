@@ -27,35 +27,42 @@ const serviceCards = [
   {
     title: "Tax Services",
     desc: "Proactive tax planning and compliance designed to minimize risk and maximize opportunity.",
-    href: "/services",
+    href: "/services/tax",
     cta: "Learn More About Tax Services",
     icon: "tax",
   },
   {
     title: "Audit & Assurance",
     desc: "Reliable, objective reporting that provides clarity and confidence in your financials.",
-    href: "/services",
+    href: "/services/audit-and-assurance",
     cta: "Learn More About Audit & Assurance",
     icon: "audit",
   },
   {
     title: "Advisory & Consulting",
     desc: "Strategic insight to help your business grow, adapt, and plan for the future.",
-    href: "/services",
+    href: "/services/advisory-and-consulting",
     cta: "Learn More About Advisory Services",
     icon: "advisory",
   },
   {
+    title: "Business Valuation",
+    desc: "Defensible valuations to support transactions, succession, and key decisions.",
+    href: "/services/business-valuation",
+    cta: "Learn More About Business Valuation",
+    icon: "cfo",
+  },
+  {
     title: "Efficient CFO Services",
     desc: "Executive-level financial leadership without the cost of a full-time CFO.",
-    href: "/services",
+    href: "/services/advisory-and-consulting",
     cta: "Learn More About CFO Services",
     icon: "cfo",
   },
   {
     title: "Virtual Back Office",
     desc: "Accurate, real-time financial data to support your operations and decision-making.",
-    href: "/services",
+    href: "/services/advisory-and-consulting",
     cta: "Learn More About Back Office Services",
     icon: "backoffice",
   },
@@ -239,7 +246,7 @@ export default function Home() {
       <section className="bg-primary py-20 md:py-28 text-white">
         <div className="container-page">
           <div className="mb-10 reveal">
-            <p className="mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-secondary-fixed">Who We Work With</p>
+            <p className="mb-4 block text-base font-bold uppercase tracking-[0.2em] text-secondary-fixed">Who We Work With</p>
             <h2 className="font-headline text-4xl md:text-5xl font-semibold mb-4">Guidance Built Around Your Goals</h2>
             <p className="text-white/80 text-lg max-w-3xl">
               We work with a range of clients, but our approach is always the same: understand your goals, build strong relationships, and provide guidance that supports long-term success.

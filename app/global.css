@@ -33,7 +33,7 @@
   }
 
   .section-kicker {
-    @apply mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-secondary;
+    @apply mb-4 block text-base font-bold uppercase tracking-[0.2em] text-secondary;
   }
 
   .section-title {

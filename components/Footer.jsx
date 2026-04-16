@@ -11,7 +11,12 @@ const awards = [
   { src: "/images/nky-chamber.jpg", alt: "NKY Chamber" },
 ];
 
-const services = ["Assurance", "Tax Planning", "Advisory", "Outsourced Accounting"];
+const services = [
+  { label: "Tax", to: "/services/tax" },
+  { label: "Audit & Assurance", to: "/services/audit-and-assurance" },
+  { label: "Advisory & Consulting", to: "/services/advisory-and-consulting" },
+  { label: "Business Valuation", to: "/services/business-valuation" },
+];
 
 const firmLinks = [
   { label: "Services", to: "/services" },
@@ -88,12 +93,12 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3">
             {services.map((s) => (
-              <li key={s}>
+              <li key={s.to}>
                 <Link
-                  href="/services"
+                  href={s.to}
                   className="text-sm text-on-surface-variant hover:text-primary transition-colors"
                 >
-                  {s}
+                  {s.label}
                 </Link>
               </li>
             ))}

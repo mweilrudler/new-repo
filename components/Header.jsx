@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
   { label: "Client Page", href: "/client" },
@@ -19,7 +21,7 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50">
       {/* Utility bar */}
       <div className="bg-primary text-white">
-        <div className="container-page flex flex-wrap items-center justify-between gap-3 py-2 text-xs">
+        <div className="container-page flex flex-wrap items-center justify-between gap-3 py-2.5 text-sm">
           <div className="flex flex-wrap items-center gap-4">
             <span className="hidden sm:inline uppercase tracking-[0.2em] text-white/50">
               Client Access
@@ -57,16 +59,16 @@ export default function Header() {
 
       {/* Main nav */}
       <div className="bg-white/95 backdrop-blur-md shadow-[0_20px_40px_rgba(13,32,59,0.06)]">
-        <div className="container-page flex items-center justify-between gap-4 py-4">
+        <div className="container-page flex items-center justify-between gap-4 py-5">
           <Link href="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <img src="/rudler.svg" alt="Rudler Logo" className="h-11 w-auto object-contain" />
+            <img src="/rudler.svg" alt="Rudler Logo" className="h-14 w-auto object-contain" />
             <div>
-              <p className="text-lg font-semibold text-primary">Rudler</p>
+              <p className="text-xl font-semibold text-primary">Rudler</p>
               <p className="text-sm uppercase tracking-[0.3em] text-primary/70">CPA + Advisory</p>
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-6 text-sm">
+          <nav className="hidden lg:flex items-center gap-8 text-base">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -85,7 +87,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden lg:inline-flex bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-md font-semibold text-sm hover:shadow-lg transition-all"
+              className="hidden lg:inline-flex bg-gradient-to-br from-primary to-primary-container text-white px-7 py-3 rounded-md font-semibold text-base hover:shadow-lg transition-all"
             >
               Schedule a Consultation
             </Link>
@@ -120,8 +122,8 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={
                   pathname === item.href
-                    ? "block py-3 text-primary font-semibold border-b border-slate-100"
-                    : "block py-3 text-on-surface-variant hover:text-primary transition-colors font-medium border-b border-slate-100"
+                    ? "block py-3.5 text-base text-primary font-semibold border-b border-slate-100"
+                    : "block py-3.5 text-base text-on-surface-variant hover:text-primary transition-colors font-medium border-b border-slate-100"
                 }
               >
                 {item.label}
@@ -130,7 +132,7 @@ export default function Header() {
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-4 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3 rounded-md font-semibold text-sm text-center hover:shadow-lg transition-all"
+              className="mt-4 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3.5 rounded-md font-semibold text-base text-center hover:shadow-lg transition-all"
             >
               Schedule a Consultation
             </Link>
