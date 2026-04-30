@@ -17,6 +17,16 @@ const awards = [
   { src: "/images/nky-chamber.jpg", alt: "NKY Chamber" },
 ];
 
+const staffPhoto = {
+  src: "/images/Career/2025 group pic.jpg",
+  alt: "Rudler team group photo",
+};
+
+const shareholderPhoto = {
+  src: "/images/Career/shareholders.jpg",
+  alt: "Rudler shareholders group photo",
+};
+
 const whyRudler = [
   {
     title: "Meaningful Work",
@@ -153,19 +163,30 @@ export default function Careers() {
 
       {/* Why Work at Rudler CPA */}
       <section className="border-t border-slate-200/70 bg-white">
-        <div className="container-page py-16">
-          <div className="mb-10 reveal">
-            <p className="section-kicker">Why Work at Rudler CPA</p>
-            <h2 className="section-title">More Than Just a Job</h2>
+        <div className="container-page grid gap-10 py-16 lg:grid-cols-2 lg:items-center">
+          <div>
+            <div className="mb-10 reveal">
+              <p className="section-kicker">Why Work at Rudler CPA</p>
+              <h2 className="section-title">More Than Just a Job</h2>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 reveal reveal-delay-1">
+              {whyRudler.map((item) => (
+                <div key={item.title} className="card border-2 border-slate-500 p-6">
+                  <h3 className="text-lg font-semibold text-ink-900">{item.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 reveal reveal-delay-1">
-            {whyRudler.map((item) => (
-              <div key={item.title} className="card border-2 border-slate-500 p-6">
-                <h3 className="text-lg font-semibold text-ink-900">{item.title}</h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-100 shadow-sm reveal reveal-delay-1">
+            <img
+              src={staffPhoto.src}
+              alt={staffPhoto.alt}
+              className="w-full object-contain object-center lg:h-full lg:min-h-[360px] lg:object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </div>
       </section>
 

@@ -104,9 +104,11 @@ const stockPhotos = {
   teamCollab:
     "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
   industryOne:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuB8Va9fIMo3IG_n-T6TQSlhDTFe_Zn0gFdRKtLgzpVgr3Yxc4fvwnDID_ee8jGrc9SmgIN8_APNxR7sMEfKHYCv2f6coviUOTtJdoE5lCBsGroIb2lTzEkcG6oOj7yzTqhQB6GR3QVjvbQuHKOO7papEYn08Fg0U86S9nVX6Gd8b9syngIHPiwrLnzdK71AR7wsLGvCRRoBBHYz2wZRORnetaR379Jb2CaJgjSUTWN_RxsIH-xQ0_yw9JO3DUntSxcTvITlPuw3E4c",
+    "https://images.unsplash.com/photo-1684695747561-9372850cf165?auto=format&fit=crop&w=1200&q=80",
+  industryTwo:
+    "https://images.unsplash.com/photo-1771868453049-b7b4a4680b5c?auto=format&fit=crop&w=1200&q=80",
   industryThree:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuC22lnGpJF1d5T-5wcIDS7HwdkeTjvdotDP8IG9OBZs_Y8Up5J_rLzMtQ_jp6vsizubh-fsMtLMJq4RBV8DMc56q1Y6-i85t965wLcwGJb3xaCdHNNlhI2-Y9mu6jTHCCKNTWwYAOuyCSvzX2Z9iTltwYA8trsgG2vlwWF_iYcRBIqWjydnsA1JEDet89q45m6ju_zbltYHm28afh29Vf6BEeI57znkxFxXy6dWF0dnSTDUlCgAqSHOqe24urVoZ5Jif-o4TiFMq0g",
+    "https://images.unsplash.com/photo-1758518730151-cf64fddb4f0a?auto=format&fit=crop&w=1200&q=80",
 };
 
 function ServiceIcon({ type }) {
@@ -226,15 +228,15 @@ export default function Home() {
             <div className="lg:col-span-7 grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="aspect-square overflow-hidden rounded-xl shadow-[0_20px_40px_rgba(13,32,59,0.06)]">
-                  <img src={stockPhotos.industryOne} alt="Manufacturing operations" className="h-full w-full object-cover" />
+                  <img src={stockPhotos.industryOne} alt="Automated manufacturing and distribution facility" className="h-full w-full object-cover" loading="lazy" />
                 </div>
-                <div className="aspect-video rounded-xl bg-primary text-white p-6 flex items-end">
-                  <p className="font-headline text-2xl italic">Construction</p>
+                <div className="aspect-video overflow-hidden rounded-xl bg-primary">
+                  <img src={stockPhotos.industryTwo} alt="Construction workers on an active building site" className="h-full w-full object-cover" loading="lazy" />
                 </div>
               </div>
               <div className="pt-8">
                 <div className="aspect-[3/4] overflow-hidden rounded-xl shadow-[0_20px_40px_rgba(13,32,59,0.06)]">
-                  <img src={stockPhotos.industryThree} alt="Professional team in office" className="h-full w-full object-cover" />
+                  <img src={stockPhotos.industryThree} alt="Professional services team collaborating in an office" className="h-full w-full object-cover" loading="lazy" />
                 </div>
               </div>
             </div>

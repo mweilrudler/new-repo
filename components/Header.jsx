@@ -8,9 +8,25 @@ const navItems = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
+  { label: "Insights", href: "/insights" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
-  { label: "Client Page", href: "/client" },
+  { label: "Client Access", href: "/client" },
+];
+
+const clientAccessItems = [
+  {
+    label: "Client Portal",
+    href: "https://www.ssportal.com/rudlercpa/",
+  },
+  {
+    label: "Pay Invoice",
+    href: "https://paynow.aiwyn.ai/payment-portal/RUDLER",
+  },
+  {
+    label: "Secure Upload",
+    href: "https://exchange-taxpayer.safesendreturns.com/DropOff/v840000000000",
+  },
 ];
 
 export default function Header() {
@@ -21,51 +37,38 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50">
       {/* Utility bar */}
       <div className="bg-primary text-white">
-        <div className="container-page flex flex-wrap items-center justify-between gap-3 py-2.5 text-sm">
+        <div className="container-page flex flex-wrap items-center justify-between gap-3 py-2.5 text-[11px]">
           <div className="flex flex-wrap items-center gap-4">
-            <span className="hidden sm:inline uppercase tracking-[0.2em] text-white/50">
+            <span className="hidden sm:inline uppercase tracking-[0.2em] text-white">
               Client Access
             </span>
-            <div className="flex flex-wrap items-center gap-3 text-white/70">
-              <a
-                className="hover:text-white transition-colors"
-                href="https://www.ssportal.com/rudlercpa/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Client Portal
-              </a>
-              <a
-                className="hover:text-white transition-colors"
-                href="https://paynow.aiwyn.ai/payment-portal/RUDLER"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Pay Invoice
-              </a>
-              <a
-                className="hover:text-white transition-colors"
-                href="https://exchange-taxpayer.safesendreturns.com/DropOff/v840000000000"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Secure Upload
-              </a>
+            <div className="flex flex-wrap items-center gap-2">
+              {clientAccessItems.map((item) => (
+                <a
+                  key={item.href}
+                  className="group inline-flex items-center gap-1.5 rounded-md border border-white/25 bg-white/10 px-2.5 py-1.5 font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] transition-all hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
           </div>
-          <span className="hidden sm:inline text-white/50">Ft Wright, KY | 859.331.1717</span>
+          <span className="hidden sm:inline text-white">Ft Wright, KY | 859.331.1717</span>
         </div>
       </div>
 
       {/* Main nav */}
       <div className="bg-white/95 backdrop-blur-md shadow-[0_20px_40px_rgba(13,32,59,0.06)]">
-        <div className="container-page flex items-center justify-between gap-4 py-5">
-          <Link href="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <img src="/rudler.svg" alt="Rudler Logo" className="h-14 w-auto object-contain" />
-            <div>
-              <p className="text-xl font-semibold text-primary">Rudler</p>
-              <p className="text-sm uppercase tracking-[0.3em] text-primary/70">CPA + Advisory</p>
-            </div>
+        <div className="container-page flex items-center justify-between gap-4 py-3 md:py-4 xl:py-5">
+          <Link href="/" className="flex items-center" onClick={() => setMenuOpen(false)}>
+            <img
+              src="/images/RudlerLogo.jpg"
+              alt="Rudler CPA + Advisory"
+              className="h-14 w-auto object-contain sm:h-16 md:h-20 xl:h-24"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8 text-base">
@@ -87,7 +90,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden lg:inline-flex bg-gradient-to-br from-primary to-primary-container text-white px-7 py-3 rounded-md font-semibold text-base hover:shadow-lg transition-all"
+              className="hidden lg:inline-flex bg-gradient-to-br from-primary to-primary-container text-white px-7 py-3 rounded-md text-sm font-semibold hover:shadow-lg transition-all"
             >
               Schedule a Consultation
             </Link>
@@ -122,8 +125,8 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={
                   pathname === item.href
-                    ? "block py-3.5 text-base text-primary font-semibold border-b border-slate-100"
-                    : "block py-3.5 text-base text-on-surface-variant hover:text-primary transition-colors font-medium border-b border-slate-100"
+                    ? "block py-3.5 text-[13px] text-primary font-semibold border-b border-slate-100"
+                    : "block py-3.5 text-[13px] text-on-surface-variant hover:text-primary transition-colors font-medium border-b border-slate-100"
                 }
               >
                 {item.label}
@@ -132,7 +135,7 @@ export default function Header() {
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-4 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3.5 rounded-md font-semibold text-base text-center hover:shadow-lg transition-all"
+              className="mt-4 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3.5 rounded-md text-[13px] font-semibold text-center hover:shadow-lg transition-all"
             >
               Schedule a Consultation
             </Link>

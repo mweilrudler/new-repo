@@ -163,9 +163,15 @@ export default function StudentsPage() {
                 banks," he's a fun reminder of the work we do every day.
               </p>
             </div>
-            <div className="card p-8 flex items-center justify-center min-h-[200px] reveal reveal-delay-1">
-              <p className="text-sm text-slate-400 italic text-center">Photo of Rudsley coming soon</p>
-            </div>
+            <figure className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm reveal reveal-delay-1">
+              <img
+                src="/images/Career/rudsley.png"
+                alt="Rudsley, Rudler's mascot"
+                className="h-full min-h-[260px] w-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
           </div>
         </div>
       </section>

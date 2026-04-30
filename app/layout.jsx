@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="min-h-screen bg-surface text-on-surface">
         <Header />
-        <main className="pt-36">{children}</main>
+        <main className="pt-32 sm:pt-36 md:pt-40 xl:pt-44">{children}</main>
         <Footer />
         <RevealObserver />
       </body>

@@ -1,4 +1,8 @@
+import { insights } from "./insights/insights-data.js";
+
 const siteUrl = "https://www.rudler.cpa"; 
+
+export const dynamic = "force-static";
 
 export default function sitemap() {
   const routes = [
@@ -11,7 +15,13 @@ export default function sitemap() {
     { url: "/contact", priority: 0.8, changeFrequency: "yearly" },
   ];
 
-  return routes.map(({ url, priority, changeFrequency }) => ({
+  const insightRoutes = insights.map((insight) => ({
+    url: `/insights/${insight.slug}`,
+    priority: 0.6,
+    changeFrequency: "monthly",
+  }));
+
+  return [...routes, ...insightRoutes].map(({ url, priority, changeFrequency }) => ({
     url: `${siteUrl}${url}`,
     lastModified: new Date(),
     changeFrequency,

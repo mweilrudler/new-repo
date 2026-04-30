@@ -1,3 +1,5 @@
+import ContactForm from "../../components/ContactForm";
+
 export const metadata = {
   title: "Contact Us | Rudler CPA",
   description:
@@ -72,51 +74,7 @@ export default function Contact() {
           <p className="text-sm text-slate-500 mb-6">
             A member of our team will respond within one business day.
           </p>
-          <form className="grid gap-4">
-            <div className="grid grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
-              />
-            </div>
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
-            />
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
-            />
-            <select className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/30">
-              <option value="">Service Needed</option>
-              <option>Tax Planning &amp; Compliance</option>
-              <option>Accounting &amp; Bookkeeping</option>
-              <option>Audit &amp; Assurance</option>
-              <option>Business Advisory Services</option>
-              <option>Estate &amp; Trust Services</option>
-              <option>Other</option>
-            </select>
-            <textarea
-              rows={4}
-              placeholder="Message"
-              className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
-            />
-            <p className="text-xs text-slate-400">
-              By submitting this form, you agree to be contacted by Rudler, PSC
-              regarding your inquiry.
-            </p>
-            <button type="submit" className="btn-primary">
-              Submit Inquiry
-            </button>
-          </form>
+          <ContactForm />
         </div>
 
         {/* Location */}

@@ -77,6 +77,11 @@ const testimonials = [
   },
 ];
 
+const shareholderPhoto = {
+  src: "/images/Career/shareholders.jpg",
+  alt: "Rudler shareholders group photo",
+};
+
 export default function ProfessionalsPage() {
   return (
     <div>
@@ -170,43 +175,54 @@ export default function ProfessionalsPage() {
 
       {/* Benefits & Perks */}
       <section className="border-t border-slate-200/70 bg-slate-50">
-        <div className="container-page py-16">
-          <div className="mb-10 reveal">
-            <p className="section-kicker">Benefits & Perks</p>
-            <h2 className="section-title">What We Offer</h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 reveal reveal-delay-1">
-            <div className="card p-6">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-5">
-                Core Benefits
-              </h3>
-              <ul className="space-y-4">
-                {corePerks.map((perk, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-slate-600">
-                    <svg className="w-4 h-4 mt-0.5 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                    {perk}
-                  </li>
-                ))}
-              </ul>
+        <div className="container-page grid gap-10 py-16 lg:grid-cols-2 lg:items-center">
+          <div>
+            <div className="mb-10 reveal">
+              <p className="section-kicker">Benefits & Perks</p>
+              <h2 className="section-title">What We Offer</h2>
             </div>
-            <div className="card p-6">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-5">
-                Additional Perks
-              </h3>
-              <ul className="space-y-4">
-                {additionalPerks.map((perk, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-slate-600">
-                    <svg className="w-4 h-4 mt-0.5 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                    {perk}
-                  </li>
-                ))}
-              </ul>
+            <div className="grid gap-6 sm:grid-cols-2 reveal reveal-delay-1">
+              <div className="card p-6">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-5">
+                  Core Benefits
+                </h3>
+                <ul className="space-y-4">
+                  {corePerks.map((perk, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-slate-600">
+                      <svg className="w-4 h-4 mt-0.5 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                      {perk}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="card p-6">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-5">
+                  Additional Perks
+                </h3>
+                <ul className="space-y-4">
+                  {additionalPerks.map((perk, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-slate-600">
+                      <svg className="w-4 h-4 mt-0.5 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                      {perk}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
+          <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-100 shadow-sm reveal reveal-delay-1">
+            <img
+              src={shareholderPhoto.src}
+              alt={shareholderPhoto.alt}
+              className="w-full object-contain object-center lg:h-full lg:min-h-[420px] lg:object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </div>
       </section>
 
