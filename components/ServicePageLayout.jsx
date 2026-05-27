@@ -7,7 +7,7 @@ function SectionLists({ lists }) {
       {lists.map((list) => (
         <div key={list.title} className="rounded-xl bg-white/60 border border-outline-variant/30 p-6 md:p-8">
           {list.title && (
-            <h4 className="font-headline text-xl font-semibold text-ink-900 mb-4">
+            <h4 className="font-body text-xl font-semibold text-ink-900 mb-4">
               {list.title}
             </h4>
           )}
@@ -42,7 +42,7 @@ export default function ServicePageLayout({
       <section className="relative w-full bg-surface-container-low py-20 md:py-28 px-6 md:px-12 mb-0">
         <div className="max-w-[1100px] mx-auto text-center reveal">
           <span className="section-kicker">{kicker}</span>
-          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
+          <h1 className="font-body text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
             {title}
           </h1>
           <p className="font-body text-lg md:text-xl text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
@@ -98,17 +98,17 @@ export default function ServicePageLayout({
                 <div className="max-w-[1200px] mx-auto reveal">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14">
                     <div className="lg:col-span-4">
-                      <span className="font-headline text-6xl md:text-7xl text-primary/30 leading-none block mb-4">
+                      <span className="font-body text-6xl md:text-7xl text-primary/30 leading-none block mb-4">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       {section.kicker && (
                         <p className="section-kicker">{section.kicker}</p>
                       )}
-                      <h2 className="font-headline text-3xl md:text-4xl font-semibold text-on-surface leading-tight mb-4">
+                      <h2 className="font-body text-3xl md:text-4xl font-semibold text-on-surface leading-tight mb-4">
                         {section.title}
                       </h2>
                       {section.tagline && (
-                        <p className="font-headline text-lg italic text-primary leading-relaxed">
+                        <p className="font-body text-lg italic text-primary leading-relaxed">
                           {section.tagline}
                         </p>
                       )}
@@ -157,7 +157,7 @@ export default function ServicePageLayout({
                   {closing.kicker}
                 </p>
               )}
-              <h2 className="font-headline text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+              <h2 className="font-body text-4xl md:text-5xl font-semibold mb-6 leading-tight">
                 {closing.heading}
               </h2>
               <p className="text-white/80 text-lg leading-relaxed">
@@ -180,7 +180,7 @@ export default function ServicePageLayout({
       <section className="my-12 md:my-24 px-6 md:px-12 max-w-[1440px] mx-auto reveal">
         <div className="bg-ink-900 rounded-2xl overflow-hidden relative p-8 sm:p-16 md:p-24 text-center">
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-6xl text-white mb-8 leading-tight">
+            <h2 className="font-body text-4xl md:text-6xl text-white mb-8 leading-tight">
               Ready to strengthen your{" "}
               <span className="text-secondary-fixed-dim italic">
                 financial foundation?

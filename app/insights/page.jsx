@@ -17,7 +17,7 @@ export default function Insights() {
         <div className="container-page grid gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-6 reveal">
             <p className="section-kicker">Insights</p>
-            <h1 className="font-headline text-4xl font-semibold leading-tight text-ink-900 md:text-6xl">
+            <h1 className="font-body text-4xl font-semibold leading-tight text-ink-900 md:text-6xl">
               Thought leadership for leaders who want clarity.
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-slate-600">
@@ -36,7 +36,7 @@ export default function Insights() {
                 />
               ) : (
                 <div className="flex h-full w-full items-center justify-center bg-primary">
-                  <span className="px-6 text-center font-headline text-3xl font-semibold text-white md:text-4xl">
+                  <span className="px-6 text-center font-body text-3xl font-semibold text-white md:text-4xl">
                     Rudler Review
                   </span>
                 </div>
@@ -47,7 +47,7 @@ export default function Insights() {
                 <span>{featuredInsight.tag}</span>
                 <span>{featuredInsight.date}</span>
               </div>
-              <h2 className="font-headline text-3xl font-semibold leading-tight text-ink-900">
+              <h2 className="font-body text-3xl font-semibold leading-tight text-ink-900">
                 {featuredInsight.title}
               </h2>
               <p className="text-sm leading-relaxed text-slate-600">

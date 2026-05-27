@@ -19,7 +19,7 @@ export default function IndustryPageLayout({
         <div className="grid grid-cols-12 gap-y-8 lg:gap-8 w-full items-center">
           <div className="col-span-12 lg:col-span-7 z-10 reveal">
             <span className="section-kicker">{kicker}</span>
-            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
+            <h1 className="font-body text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
               {title}
             </h1>
             <p className="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed">
@@ -88,7 +88,7 @@ export default function IndustryPageLayout({
                   key={item}
                   className="flex gap-5 pb-5 border-b border-outline-variant/30 last:border-b-0"
                 >
-                  <span className="font-headline text-2xl text-primary/40 min-w-10">
+                  <span className="font-body text-2xl text-primary/40 min-w-10">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <p className="text-on-surface-variant leading-relaxed pt-1">{item}</p>
@@ -116,7 +116,7 @@ export default function IndustryPageLayout({
               <p className="mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-secondary-fixed">
                 {strategicInsight.kicker || "Strategic Insight"}
               </p>
-              <h2 className="font-headline text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+              <h2 className="font-body text-4xl md:text-5xl font-semibold mb-6 leading-tight">
                 {strategicInsight.heading}
               </h2>
               <p className="text-white/80 text-lg leading-relaxed">
@@ -140,7 +140,7 @@ export default function IndustryPageLayout({
                 key={group.title}
                 className="rounded-2xl bg-surface-container-lowest p-8 md:p-10 shadow-[0_20px_40px_rgba(13,32,59,0.06)] border border-outline-variant/20 flex flex-col gap-4 transition-transform duration-300 hover:-translate-y-1"
               >
-                <h3 className="font-headline text-2xl font-semibold text-ink-900 mb-2">
+                <h3 className="font-body text-2xl font-semibold text-ink-900 mb-2">
                   {group.title}
                 </h3>
                 <ul className="space-y-3 flex-1">
@@ -161,7 +161,7 @@ export default function IndustryPageLayout({
       <section className="mb-12 md:mb-24 px-6 md:px-12 max-w-[1440px] mx-auto reveal">
         <div className="bg-ink-900 rounded-2xl overflow-hidden relative p-8 sm:p-16 md:p-24 text-center">
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-6xl text-white mb-8 leading-tight">
+            <h2 className="font-body text-4xl md:text-6xl text-white mb-8 leading-tight">
               Ready to strengthen your{" "}
               <span className="text-secondary-fixed-dim italic">
                 financial foundation?

@@ -56,7 +56,7 @@ export default function Footer() {
       <div className="container-page grid gap-12 md:grid-cols-4">
         {/* Brand */}
         <div className="md:col-span-1">
-          <p className="font-headline text-xl text-primary mb-4">Rudler</p>
+          <p className="font-body text-xl text-primary mb-4">Rudler</p>
           <p className="text-sm text-on-surface-variant leading-relaxed mb-6">
             Independent CPA and advisory professionals helping closely held
             businesses, families, and nonprofits navigate growth with clarity.

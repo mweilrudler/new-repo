@@ -191,7 +191,7 @@ export default async function InsightStoryPage({ params }) {
                 <span>{insight.date}</span>
                 <span>{insight.readTime}</span>
               </div>
-              <h1 className="font-headline text-4xl font-semibold leading-tight text-on-surface md:text-6xl lg:text-[4.5rem]">
+              <h1 className="font-body text-4xl font-semibold leading-tight text-on-surface md:text-6xl lg:text-[4.5rem]">
                 {insight.title}
               </h1>
               <p className="max-w-3xl text-xl leading-relaxed text-on-surface-variant">
@@ -260,7 +260,7 @@ export default async function InsightStoryPage({ params }) {
 
             {insight.sections.map((section) => (
               <section key={section.heading} className="space-y-5">
-                <h2 className="font-headline text-3xl font-semibold leading-tight text-ink-900 md:text-4xl">
+                <h2 className="font-body text-3xl font-semibold leading-tight text-ink-900 md:text-4xl">
                   {section.heading}
                 </h2>
                 {section.body.map((block, blockIndex) => (
@@ -295,7 +295,7 @@ export default async function InsightStoryPage({ params }) {
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-secondary-fixed">
                 Talk With Rudler
               </p>
-              <h2 className="font-headline text-2xl font-semibold leading-tight">
+              <h2 className="font-body text-2xl font-semibold leading-tight">
                 Need guidance tied to your business?
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-white/80">

@@ -1,15 +1,16 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { teamSections as staffSections } from "../app/team/team-data.js";
 
 const industries = [
-  "Manufacturing & Distribution",
-  "Construction",
-  "Food & Beverage",
-  "Transportation",
-  "Professional Services",
-  "Not-for-Profit Organizations",
+  { name: "Manufacturing & Distribution", href: "/industries/manufacturing-and-distribution" },
+  { name: "Construction", href: "/industries/construction" },
+  { name: "Food & Beverage", href: "/industries/food-and-beverage" },
+  { name: "Transportation", href: "/industries/transportation-and-logistics" },
+  { name: "Professional Services", href: "/industries" },
+  { name: "Not-for-Profit Organizations", href: "/industries/not-for-profit" },
 ];
 
 const values = [
@@ -129,109 +130,61 @@ const awardSections = [
   },
 ];
 
-const staffSections = [
-  {
-    title: "Leadership",
-    label: "Our Leadership Team",
-    folder: "Leadership",
-    people: [
-      { name: "Alex Weidner", credentials: "CPA, CFE", title: "President / Shareholder", image: "Alex Weidner.jpg" },
-      { name: "Audrey Goetz", credentials: "CPA, CVA", title: "Shareholder", image: "Audrey Goetz.jpg" },
-      { name: "David Neuhaus", credentials: "CPA", title: "Shareholder", image: "David Neuhaus.jpg" },
-      { name: "Eric Ficke", credentials: "CPA", title: "Director of CAS Department / Principal", image: "Eric Ficke.jpg" },
-      { name: "Evan Kandra", credentials: "CPA", title: "Principal", image: "Evan Kandra.jpg" },
-      { name: "Greg Lamping", credentials: "CPA", title: "Shareholder", image: "Greg Lamping.jpg" },
-      { name: "Jeff Epplen", title: "Shareholder", image: "Jeff Epplen.jpg" },
-      { name: "John Wood", credentials: "CPA, CVA", title: "Shareholder", image: "John Wood.jpg" },
-      { name: "Melanie Smart", credentials: "CPA", title: "Shareholder", image: "Melanie Smart.jpg" },
-      { name: "Tami Lawson", credentials: "CPA", title: "Chief Operating Officer / Shareholder", image: "Tami Lawson.jpg" },
-    ],
-  },
-  {
-    title: "Professional",
-    label: "Our Professional Team",
-    folder: "Professional",
-    people: [
-      { name: "Alaina Shaffer", credentials: "CPA", title: "Assurance Manager", image: "Alaina Shaffer.jpg" },
-      { name: "Alexis Ludtke", credentials: "CPA", title: "Tax Manager", image: "Alexis Ludtke.jpg" },
-      { name: "Alyssa Monson", title: "Staff Accountant", image: "Alyssa Monson.jpg" },
-      { name: "Becca Thorman", credentials: "CPA, CVA", title: "Assurance Manager", image: "Becca Thorman.jpg" },
-      { name: "Brandon Hughes", title: "Senior Accountant", image: "Brandon Hughes.jpg" },
-      { name: "Brooke Kramer", credentials: "CPA", title: "Tax Manager", image: "Brooke Kramer.jpg" },
-      { name: "Casey Roaden", title: "Client Accounting Specialist", image: "Casey Roaden.png" },
-      { name: "Chris Seitz", title: "Senior Client Accounting Specialist", image: "Chris Seitz.jpg" },
-      { name: "Connor Josselyn", title: "Staff Accountant", image: "Connor Josselyn.jpg" },
-      { name: "Drew Sullivan", title: "Assurance Manager", image: "Drew Sullivan.jpg" },
-      { name: "Emily Demurias", credentials: "CPA", title: "Tax Manager", image: "Emily Demurias.jpg" },
-      { name: "Erin Mauch", title: "Senior Client Accounting Specialist", image: "Erin Mauch.jpg" },
-      { name: "Gail Ohr", title: "Client Accounting Manager", image: "Gail Ohr.jpg" },
-      { name: "Gail Williams", title: "Staff Accountant / Administration", image: "Gail Williams.jpg" },
-      { name: "Gina Dabrowski", title: "Senior Client Accounting Specialist", image: "Gina Dabrowski.jpg" },
-      { name: "Gina Earle", credentials: "CPA", title: "Client Accounting Specialist", image: "Gina Earle.jpg" },
-      { name: "Grant Haubner", title: "Staff Accountant", image: "Grant Haubner.jpg" },
-      { name: "Heather Davis", credentials: "CPA", title: "Tax Senior Manager", image: "Heather Davis.jpg" },
-      { name: "Heather Pillard", title: "Client Accounting Manager", image: "Heather Pillard.jpg" },
-      { name: "Jon Peul", title: "Senior Accountant", image: "Jon Peul.jpg" },
-      { name: "Josh Myers", title: "Senior Accountant", image: "Josh Myers.jpg" },
-      { name: "Kacie Hamlett", title: "Senior Accountant", image: "Kacie Hamlett.jpg" },
-      { name: "Kaitlyn Evans", credentials: "CPA", title: "Tax Manager", image: "Kaitlyn Evans.jpg" },
-      { name: "Kelsey Baker", credentials: "CPA", title: "Tax Manager", image: "Kelsey Baker.jpeg" },
-      { name: "Lisa Dooley", credentials: "CPA", title: "Assurance Manager", image: "Lisa Dooley.jpg" },
-      { name: "Lisa Schaible", title: "Client Accounting Manager", image: "Lisa Schaible.jpg" },
-      { name: "Lisa Totten", title: "Senior Client Accounting Specialist", image: "Lisa Totten.jpg" },
-      { name: "Marianna Kaufman", title: "Staff Accountant", image: "Marianna Kaufman.jpg" },
-      { name: "Mark Benson", credentials: "CPA, CVA", title: "Tax Manager", image: "Mark Benson.jpg" },
-      { name: "Matt Topmiller", credentials: "CPA", title: "Tax Manager", image: "Matt Topmiller.jpg" },
-      { name: "Max Epplen", credentials: "CPA", title: "Senior Accountant", image: "Max Epplen.jpg" },
-      { name: "Megha Pandya", credentials: "CPA", title: "Tax Manager", image: "Megha Pandya.jpg" },
-      { name: "Missy Heist", title: "Client Accounting Manager", image: "Missy Heist.jpg" },
-      { name: "Nick Myers", title: "Senior Accountant", image: "Nick Myers.jpg" },
-      { name: "Shelby Adams", title: "Client Accounting Specialist", image: "Shelby Adams.jpg" },
-      { name: "Teresa Mann", title: "Client Accounting Specialist", image: "Teresa Mann.jpg" },
-      { name: "Thomas Kennedy", title: "Staff Accountant", image: "Thomas Kennedy.jpeg" },
-    ],
-  },
-  {
-    title: "Support",
-    label: "Our Support Team",
-    folder: "Support",
-    people: [
-      { name: "Carrie Claypool", title: "Accounts Receivable & Billing Specialist", image: "Carrie Claypool.jpg" },
-      { name: "Jackie Noll", title: "Director of Human Resources", image: "Jackie Noll.jpeg" },
-      { name: "Jenna Polston", title: "Tax Department Administrative Assistant", image: "Jenna Polston.jpg" },
-      { name: "Jennifer Smith", title: "HR Coordinator", image: "Jennifer Smith.jpg" },
-      { name: "Karen Daugherty", credentials: "CPA, CGMA", title: "Client Support Specialist", image: "Karen Daugherty.jpg" },
-      { name: "Kathy Pool", credentials: "CPA", title: "Firm Administrator", image: "Kathy Pool.jpg" },
-      { name: "Kelsey McCloskey", title: "Business Development Coordinator", image: "Kelsey McCloskey.jpg" },
-      { name: "Kendra Anderson", title: "Talent & Engagement Coordinator", image: "Kendra Anderson.jpg" },
-      { name: "Laura Blair", title: "Marketing Coordinator", image: "Laura Blair.jpg" },
-      { name: "Lisa Robinson", title: "Reception & Processor", image: "Lisa Robinson.jpg" },
-      { name: "Matthew Weil", title: "Technology Operations Coordinator", image: "Matthew Weil.jpg" },
-      { name: "Ritu Patel", title: "Department Coordinator", image: "Ritu Patel.jpg" },
-    ],
-  },
+const tabs = [
+  { label: "Our Story", hash: "our-story" },
+  { label: "Mission & Values", hash: "mission-values" },
+  { label: "Awards", hash: "awards" },
+  { label: "Our Team", hash: "our-team" },
 ];
-
-const tabs = ["Our Story", "Mission & Values", "Awards", "Our Team"];
 
 export default function AboutTabs() {
   const [active, setActive] = useState(0);
-  const tabContentTopRef = useRef(null);
+  const sectionRefs = useRef([]);
+
+  const scrollToSection = (index) => {
+    const el = sectionRefs.current[index];
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 220;
+    window.scrollTo({ top: Math.max(top, 0), behavior: "smooth" });
+  };
 
   const handleTabChange = (index) => {
     setActive(index);
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        if (!tabContentTopRef.current) return;
-        const top =
-          tabContentTopRef.current.getBoundingClientRect().top +
-          window.scrollY -
-          190;
-        window.scrollTo({ top: Math.max(top, 0), behavior: "auto" });
-      });
-    });
+    if (typeof window !== "undefined") {
+      history.replaceState(null, "", `#${tabs[index].hash}`);
+    }
+    scrollToSection(index);
   };
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    const idx = tabs.findIndex((t) => t.hash === hash);
+    if (idx >= 0) {
+      setActive(idx);
+      // Give the layout one frame so refs are populated.
+      requestAnimationFrame(() => scrollToSection(idx));
+    }
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible.length > 0) {
+          const idx = Number(visible[0].target.dataset.sectionIndex);
+          setActive(idx);
+        }
+      },
+      {
+        rootMargin: "-220px 0px -55% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
+    );
+    sectionRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div>
@@ -278,30 +231,36 @@ export default function AboutTabs() {
         </div>
       </section>
 
-      {/* Tab strip */}
-      <div className="sticky top-32 z-40 bg-white border-b border-slate-200 shadow-sm sm:top-36 md:top-40 xl:top-44">
-        <div className="container-page flex gap-0">
+      {/* Tab strip — horizontal, sticky, acts as scroll anchors */}
+      <div
+        data-about-tabstrip
+        className="sticky top-32 z-40 bg-white border-b border-slate-200 shadow-sm transition-colors sm:top-36 md:top-40 xl:top-44"
+      >
+        <div className="container-page flex gap-0 flex-wrap">
           {tabs.map((tab, i) => (
             <button
-              key={tab}
+              key={tab.hash}
+              data-about-tab
               onClick={() => handleTabChange(i)}
-              className={`px-6 py-4 text-sm font-medium transition-colors border-b-2 -mb-px ${
+              className={`about-tab whitespace-nowrap px-6 py-4 text-sm font-medium transition-colors border-b-2 -mb-px ${
                 active === i
                   ? "border-primary text-primary"
-                  : "border-transparent text-on-surface-variant hover:text-primary"
+                  : "border-transparent text-on-surface-variant hover:bg-primary/10 hover:text-primary"
               }`}
             >
-              {tab}
+              {tab.label}
             </button>
           ))}
         </div>
       </div>
 
-      <div ref={tabContentTopRef} />
-
       {/* Tab: Our Story */}
-      {active === 0 && (
-        <div>
+      <div
+        id="our-story"
+        ref={(el) => (sectionRefs.current[0] = el)}
+        data-section-index="0"
+        className="scroll-mt-[220px]"
+      >
           {/* Relationships + Strategic Partner */}
           <section className="container-page py-16">
             <div className="grid gap-12 md:grid-cols-2">
@@ -360,10 +319,14 @@ export default function AboutTabs() {
                 </div>
                 <div className="grid gap-4 grid-cols-2 reveal reveal-delay-1">
                   {industries.map((industry) => (
-                    <div key={industry} className="card p-5 flex items-center gap-3">
+                    <Link
+                      key={industry.name}
+                      href={industry.href}
+                      className="card p-5 flex items-center gap-3 transition hover:-translate-y-0.5 hover:shadow-soft hover:bg-primary/5"
+                    >
                       <div className="w-2 h-2 rounded-full bg-secondary flex-shrink-0" />
-                      <span className="text-sm font-medium text-ink-900">{industry}</span>
-                    </div>
+                      <span className="text-sm font-medium text-ink-900">{industry.name}</span>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -451,12 +414,15 @@ export default function AboutTabs() {
               </div>
             </div>
           </section>
-        </div>
-      )}
+      </div>
 
       {/* Tab: Mission & Values */}
-      {active === 1 && (
-        <div>
+      <div
+        id="mission-values"
+        ref={(el) => (sectionRefs.current[1] = el)}
+        data-section-index="1"
+        className="scroll-mt-[220px] border-t border-slate-200/70"
+      >
           {/* Mission / Vision / Motto */}
           <section className="container-page py-16">
             <div className="mb-10 reveal">
@@ -489,7 +455,7 @@ export default function AboutTabs() {
               </div>
               <div className="card p-6 space-y-3 bg-primary text-white">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Our Motto</p>
-                <p className="text-xl font-headline font-semibold">Pursue Your Vision</p>
+                <p className="text-xl font-body font-semibold">Pursue Your Vision</p>
                 <p className="text-sm text-white/80 leading-relaxed">
                   For our clients, it means helping them achieve their financial
                   and business goals. For our people, it means supporting their
@@ -522,12 +488,15 @@ export default function AboutTabs() {
               </div>
             </div>
           </section>
-        </div>
-      )}
+      </div>
 
       {/* Tab: Awards */}
-      {active === 2 && (
-        <div>
+      <div
+        id="awards"
+        ref={(el) => (sectionRefs.current[2] = el)}
+        data-section-index="2"
+        className="scroll-mt-[220px] border-t border-slate-200/70"
+      >
           <section className="container-page py-16">
             <div className="mb-10 reveal">
               <p className="section-kicker">Awards & Recognition</p>
@@ -576,12 +545,15 @@ export default function AboutTabs() {
               ))}
             </div>
           </section>
-        </div>
-      )}
+      </div>
 
       {/* Tab: Our Team */}
-      {active === 3 && (
-        <div>
+      <div
+        id="our-team"
+        ref={(el) => (sectionRefs.current[3] = el)}
+        data-section-index="3"
+        className="scroll-mt-[220px] border-t border-slate-200/70"
+      >
           <section className="container-page py-16">
             <div className="max-w-3xl reveal">
               <p className="section-kicker">Our Team</p>
@@ -613,15 +585,16 @@ export default function AboutTabs() {
                     </p>
                   </div>
 
-                  <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+                  <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
                     {section.people.map((person) => (
-                      <article
+                      <Link
                         key={`${section.folder}-${person.name}`}
+                        href={`/team/${person.slug}`}
                         className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(13,32,59,0.08)]"
                       >
                         <div className="aspect-[4/5] overflow-hidden bg-slate-100">
                           <img
-                            src={`/images/staff/${section.folder}/${person.image}`}
+                            src={person.imageSrc}
                             alt={person.name}
                             className="h-full w-full object-cover object-top grayscale-[4%] transition duration-500 group-hover:scale-105 group-hover:grayscale-0"
                             loading={sectionIndex === 0 ? "eager" : "lazy"}
@@ -641,15 +614,14 @@ export default function AboutTabs() {
                             {person.title}
                           </p>
                         </div>
-                      </article>
+                      </Link>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
           </section>
-        </div>
-      )}
+      </div>
     </div>
   );
 }

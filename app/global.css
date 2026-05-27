@@ -37,7 +37,7 @@
   }
 
   .section-title {
-    @apply font-headline text-4xl font-semibold text-on-surface md:text-5xl;
+    @apply font-body text-4xl font-semibold text-ink-900 md:text-5xl;
   }
 
   .card {

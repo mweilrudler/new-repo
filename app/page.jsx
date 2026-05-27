@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CultureCarousel from "../components/CultureCarousel";
 
 
 const testimonials = [
@@ -136,7 +137,7 @@ export default function Home() {
           {/* Text */}
           <div className="col-span-12 lg:col-span-7 z-10 reveal">
             <span className="section-kicker">A Different Kind of Accounting Firm</span>
-            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
+            <h1 className="font-body text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
               A partner you can trust.{" "}
               <span className="italic text-primary">Guidance to help you pursue your vision.</span>
             </h1>
@@ -172,7 +173,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
             </div>
             <div className="absolute bottom-4 left-4 md:-bottom-8 md:-left-8 vellum-layer bg-white/80 p-5 md:p-8 rounded-xl shadow-xl max-w-[180px] md:max-w-[260px] border border-white/20 reveal reveal-delay-3">
-              <p className="font-headline text-3xl font-bold text-ink-900 mb-1">57+</p>
+              <p className="font-body text-3xl font-bold text-ink-900 mb-1">57+</p>
               <p className="text-xs uppercase tracking-[0.15em] text-on-surface-variant">
                 Years Serving the Region
               </p>
@@ -249,14 +250,14 @@ export default function Home() {
         <div className="container-page">
           <div className="mb-10 reveal">
             <p className="mb-4 block text-base font-bold uppercase tracking-[0.2em] text-secondary-fixed">Who We Work With</p>
-            <h2 className="font-headline text-4xl md:text-5xl font-semibold mb-4">Guidance Built Around Your Goals</h2>
+            <h2 className="font-body text-4xl md:text-5xl font-semibold mb-4">Guidance Built Around Your Goals</h2>
             <p className="text-white/80 text-lg max-w-3xl">
               We work with a range of clients, but our approach is always the same: understand your goals, build strong relationships, and provide guidance that supports long-term success.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 reveal reveal-delay-1">
             <div className="rounded-2xl bg-white/5 border border-white/15 p-8 md:p-10 backdrop-blur-sm transition-colors hover:bg-white/10">
-              <h3 className="font-headline text-3xl font-semibold">Closely Held Businesses</h3>
+              <h3 className="font-body text-3xl font-semibold">Closely Held Businesses</h3>
               <p className="mt-4 text-sm text-white/75 leading-relaxed">
                 Supporting business owners through growth, transition, and long-term planning.
               </p>
@@ -265,7 +266,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="rounded-2xl bg-white/5 border border-white/15 p-8 md:p-10 backdrop-blur-sm transition-colors hover:bg-white/10">
-              <h3 className="font-headline text-3xl font-semibold">Individuals & Families</h3>
+              <h3 className="font-body text-3xl font-semibold">Individuals & Families</h3>
               <p className="mt-4 text-sm text-white/75 leading-relaxed">
                 Helping individuals and families navigate complex financial decisions and build long-term wealth.
               </p>
@@ -318,11 +319,11 @@ export default function Home() {
                     index < howWeWorkSteps.length - 1 ? "border-b border-outline-variant/30" : ""
                   }`}
                 >
-                  <span className="font-headline text-3xl md:text-4xl text-primary/40 min-w-10">
+                  <span className="font-body text-3xl md:text-4xl text-primary/40 min-w-10">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="font-headline text-2xl md:text-3xl leading-tight text-on-surface mb-3">
+                    <h3 className="font-body text-2xl md:text-3xl leading-tight text-on-surface mb-3">
                       {step.title}
                     </h3>
                     <p className="text-on-surface-variant leading-relaxed">{step.desc}</p>
@@ -334,21 +335,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CAREERS */}
-      <section className="bg-surface-container-low py-16">
-        <div className="container-page">
-          <div className="card p-8 md:p-10 reveal">
-            <p className="section-kicker">Build Your Career at Rudler, PSC</p>
-            <h2 className="section-title mb-4">Grow with a Team That Invests in You</h2>
-            <p className="text-on-surface-variant text-lg max-w-4xl">
-              We're always looking for motivated individuals who want to grow, contribute, and make an impact. Whether you're just starting your career or taking the next step, we offer opportunities to succeed in a supportive and forward-thinking environment.
-            </p>
-            <Link href="/careers" className="inline-block mt-6 btn-primary">
-              Explore Careers
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* CAREERS + CULTURE CAROUSEL */}
+      <CultureCarousel />
 
       {/* TESTIMONIALS */}
       <section className="py-16 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto">
@@ -369,14 +357,14 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {testimonials.map((t, i) => (
             <div key={i} className={`relative rounded-xl bg-white p-9 md:p-10 border border-slate-200 shadow-sm reveal reveal-delay-${i + 1}`}>
-              <div className="absolute top-2 left-5 text-6xl font-headline text-slate-300 leading-none select-none">
+              <div className="absolute top-2 left-5 text-6xl font-body text-slate-300 leading-none select-none">
                 &ldquo;
               </div>
               <div className="pt-8 h-full flex flex-col text-center">
                 <p className="text-primary italic text-lg leading-relaxed">
                   {t.header}
                 </p>
-                <p className="font-headline text-xl leading-relaxed text-on-surface-variant my-6 italic flex-1">
+                <p className="font-body text-xl leading-relaxed text-on-surface-variant my-6 italic flex-1">
                   {t.quote}
                 </p>
                 <div className="border-t border-outline-variant pt-5">
@@ -392,7 +380,7 @@ export default function Home() {
       <section className="mb-12 md:mb-24 px-6 md:px-12 max-w-[1440px] mx-auto reveal">
         <div className="bg-ink-900 rounded-2xl overflow-hidden relative p-8 sm:p-16 md:p-24 text-center">
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-6xl text-white mb-8 leading-tight">
+            <h2 className="font-body text-4xl md:text-6xl text-white mb-8 leading-tight">
               Ready to strengthen your{" "}
               <span className="text-secondary-fixed-dim italic">
                 financial foundation?

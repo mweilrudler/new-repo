@@ -63,7 +63,7 @@ export default function Industries() {
       <section className="relative w-full bg-surface-container-low py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-[1100px] mx-auto text-center reveal">
           <span className="section-kicker">Industries</span>
-          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
+          <h1 className="font-body text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] text-on-surface leading-[1.1] mb-6 md:mb-8 font-semibold">
             Tailored Support for Your Industry
           </h1>
           <p className="font-body text-lg md:text-xl text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
@@ -90,7 +90,7 @@ export default function Industries() {
                 />
               </div>
               <div className="p-8 md:p-10 flex flex-col gap-4 flex-1">
-                <h2 className="font-headline text-2xl md:text-3xl font-semibold text-ink-900">
+                <h2 className="font-body text-2xl md:text-3xl font-semibold text-ink-900">
                   {industry.title}
                 </h2>
                 <p className="text-on-surface-variant leading-relaxed flex-1">
@@ -109,7 +109,7 @@ export default function Industries() {
       <section className="mb-12 md:mb-24 px-6 md:px-12 max-w-[1440px] mx-auto reveal">
         <div className="bg-ink-900 rounded-2xl overflow-hidden relative p-8 sm:p-16 md:p-24 text-center">
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="font-headline text-4xl md:text-6xl text-white mb-8 leading-tight">
+            <h2 className="font-body text-4xl md:text-6xl text-white mb-8 leading-tight">
               Ready to strengthen your{" "}
               <span className="text-secondary-fixed-dim italic">
                 financial foundation?

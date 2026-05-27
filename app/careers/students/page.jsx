@@ -270,11 +270,11 @@ export default function StudentsPage() {
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {testimonials.map((t, i) => (
             <div key={i} className={`relative h-full reveal reveal-delay-${i + 1}`}>
-              <div className="absolute -top-6 -left-4 text-7xl font-headline text-surface-container-highest leading-none select-none">
+              <div className="absolute -top-6 -left-4 text-7xl font-body text-surface-container-highest leading-none select-none">
                 &ldquo;
               </div>
               <div className="pt-8 h-full flex flex-col">
-                <p className="font-headline text-xl leading-relaxed text-on-surface-variant mb-8 italic flex-1">
+                <p className="font-body text-xl leading-relaxed text-on-surface-variant mb-8 italic flex-1">
                   {t.quote}
                 </p>
                 <div className="border-t border-outline-variant pt-6">
@@ -285,8 +285,13 @@ export default function StudentsPage() {
           ))}
         </div> <br />
           <div className="mt-10">
-            <Link href="/contact" className="btn-primary">
-              Get in Touch
+            <Link
+              href="https://rudlerpsc.applytojob.com/apply/"
+              className="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Job Postings
             </Link>
           </div>
         </div>

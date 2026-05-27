@@ -11,17 +11,6 @@ const clientLinks = [
     ),
   },
   {
-    label: "Pay Invoice",
-    href: "https://paynow.aiwyn.ai/payment-portal/RUDLER",
-    description:
-      "Securely pay your outstanding Rudler invoices online. Fast, convenient, and available any time.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
-      </svg>
-    ),
-  },
-  {
     label: "Secure Upload",
     href: "https://exchange-taxpayer.safesendreturns.com/DropOff/v840000000000",
     description:
@@ -32,6 +21,18 @@ const clientLinks = [
       </svg>
     ),
   },
+  {
+    label: "Pay Invoice",
+    href: "https://paynow.aiwyn.ai/payment-portal/RUDLER",
+    description:
+      "Securely pay your outstanding Rudler invoices online. Fast, convenient, and available any time.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+      </svg>
+    ),
+  },
+  
 ];
 
 export const metadata = {
@@ -68,7 +69,7 @@ export default function Client() {
             >
               <div>
                 <div className="text-primary mb-6">{link.icon}</div>
-                <h2 className="font-headline text-2xl text-on-surface font-semibold mb-3 group-hover:text-primary transition-colors">
+                <h2 className="font-body text-2xl text-on-surface font-semibold mb-3 group-hover:text-primary transition-colors">
                   {link.label}
                 </h2>
                 <p className="text-on-surface-variant text-sm leading-relaxed">
@@ -88,7 +89,7 @@ export default function Client() {
         {/* Help callout */}
         <div className="mt-16 bg-surface-container-low rounded-xl reveal reveal-delay-2 p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="font-headline text-xl text-on-surface font-semibold mb-1">
+            <p className="font-body text-xl text-on-surface font-semibold mb-1">
               Need help accessing your account?
             </p>
             <p className="text-on-surface-variant text-sm">
