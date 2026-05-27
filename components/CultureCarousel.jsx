@@ -7,32 +7,32 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const slides = [
   {
-    src: "/images/carousel/Christmas Party.jpg",
+    src: "/images/Carousel/Christmas Party.jpg",
     title: "Holiday Celebration",
     caption: "Closing the year out together.",
   },
   {
-    src: "/images/carousel/Thanksgiving.jpg",
+    src: "/images/Carousel/Thanksgiving.jpg",
     title: "Thanksgiving Together",
     caption: "Sharing a meal as a team.",
   },
   {
-    src: "/images/carousel/Cookie Truck.jpg",
+    src: "/images/Carousel/Cookie Truck.jpg",
     title: "Cookie Truck Day",
     caption: "Sweet breaks in the middle of busy season.",
   },
   {
-    src: "/images/carousel/NKU Game.jpg",
+    src: "/images/Carousel/NKU Game.jpg",
     title: "Attending NKY Chamber Events",
     caption: "Growing connections through local events.",
   },
   {
-    src: "/images/carousel/Womes Inititiave.jpg",
+    src: "/images/Carousel/Womes Inititiave.jpg",
     title: "Women's Initiative",
     caption: "Connecting, mentoring, and growing.",
   },
   {
-    src: "/images/carousel/Braxton.jpg",
+    src: "/images/Carousel/Braxton.jpg",
     title: "End of Season Party",
     caption: "Celebrating another successful tax season.",
   },
