@@ -145,7 +145,7 @@ export default function Footer() {
           </ul>
           <div className="rounded-lg bg-surface-container-low p-4 text-sm text-on-surface-variant leading-relaxed">
             <p className="font-semibold text-primary mb-1">
-              809 Wright Summit Pkwy
+              809 Wright's Summit Pkwy
             </p>
             <p>Suite 200, Ft Wright, KY</p>
             <p>info@rudler.cpa</p>
